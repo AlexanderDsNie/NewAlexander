@@ -32,7 +32,8 @@
             background-repeat: no-repeat;
             background-position: -1000px -300px; 
         }
-        a{
+        #p1{
+            color: aqua;
             text-decoration: line-through;
         }
         .div3{
@@ -48,6 +49,31 @@
         }
         .x1 h1{
             color: cornflowerblue;
+        }
+        .dd{
+            color: brown;
+            background: violet;
+            height: 100px;
+        }
+        .dd::before{
+            content: 'asdad';
+            color: salmon;
+        }
+        .dd::after{
+            content: '苏丹国';
+            color: lightgoldenrodyellow;
+            background: aquamarine;
+        }
+        a{
+            color: cadetblue;
+            background: mediumturquoise;
+        }
+        a:hover{
+            color: ghostwhite;
+        }
+        #dxd:hover{
+            color: chocolate;
+            background: ghostwhite;
         }
     </style>
 </head>
@@ -71,7 +97,7 @@
         </div>
     </div>
     <div class="div2"></div>
-    <a href="#">afsasdf</a>
+    <p id="p1">bfdgfdf</p>
     <div class="div3">
             我是dsfsfdsf
     </div>
@@ -79,5 +105,9 @@
             dwadasdad
             <h1>HAHAHAHA</h1>
     </div>
+    asfasfa
+    <!-- <p class="dd">dd<span id="dxd">ddd</span>dddd</p> -->
+    <div class="dd">dd<span id="dxd">ddd</span>dddd</div>    
+    <a href="https://www.bilibili.com/">bilibili</a>
 </body>
 </html>
