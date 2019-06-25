@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>《少女前线》官方网站-二次元枪娘养成战术手游</title>
 </head>
 <style>
+    * {
+        margin: 0px;
+        padding: 0;
+    }
+    img {
+        vertical-align: middle;
+    }
     .item{
         float: left;
-        width: 60px;
+        width: 110px;
         height: 90px;
         text-align: center;
-        padding: 0 20px;
     }
     ul{
-        float: left;
-        width:100%;
-        padding:0;
-        margin:0;
-        list-style-type:none;
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
     }
     a{
         float: left;
@@ -27,47 +35,310 @@
         font-size: 20px;
         font-family: "微软雅黑";
         text-decoration:none;
+        text-align: center;
         color:white;
-        margin: 40px 0px;
     }
     a:hover{
         color: gold;
     }
+    .logo{
+        /* width: 152px; */
+        line-height: 90px;
+        float: left;
+        position: absolute;
+    }
+    .title_space {
+        height: 90px;
+        width: 1200px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .nav{
+        padding-left: 0;
+        list-style: none;
+    }
+    .div1 .title_form > li {
+        width: 110px;
+        height: 90px;
+        text-align: center;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        position: relative;
+        display: -webkit-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+    }
+    .title_form{
+        float: right;
+        margin: 0;
+  
+    }
     .div1{
-        height: 100px;
+        width: 100%;
+        height: 90px;
+        position: absolute;
+        left: 0;
+        top: 0;
         background-color: black;
-        background-image: url(http://gf.ppgame.com/web/pc/images/logo.png);
-        background-repeat: no-repeat;
-        background-position: 200px 20px; 
     }
     .div2{
-        margin: 0 400px;
+        float: right;
+        margin-right: 3%;
     }
     .div3{
-        height: 1000px;
+        height: 1050px;
         background-color: black;
-        background-image: url(s2.png);
+        background-image: url(http://gf.ppgame.com/web/pc/images/bg_index1.jpg);
+        background-position: center;
         background-repeat: no-repeat;
-        background-position: 0px 0px;
+    }
+    .div1 .title_form >.active>a .yellow_line {
+        display: block;
+    }
+    .div1 .title_form >.active>a {
+        color: gold;
+    }
+    .yellow_line{
+        width: 85%;
+        height: 0px;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;      
+        display: none;
+        border-bottom: 6px solid rgb(255, 192, 0);
+        border-left: 6px solid rgb(25, 25, 25);
+        border-right: 6px solid rgb(25, 25, 25);
+   }
+    .div4{
+        height: 1080px;
+        background-color: black;
+        background-image: url(http://gf.ppgame.com/web/pc/images/bg_index2.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .div5{
+        height: 1080px;
+        background-color: black;
+        background-image: url(http://gf.ppgame.com/web/pc/images/bg_index3.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .div6{
+        height: 1080px;
+        background-color: black;
+        background-image: url(http://gf.ppgame.com/web/pc/images/bg_index4.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .div7{
+        height: 1080px;
+        background-color: black;
+        background-image: url(http://gf.ppgame.com/web/pc/images/bg_index5.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .div8{
+        height: 1080px;
+        background-color: black;
+        background-image: url(http://gf.ppgame.com/web/pc/images/bg_index6.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .actor{
+        width: 148px;
+        float: right;
+        position: relative;
+        padding-top: 10px;
+    }
+    .login{
+        width: 68px;
+        background: url(http://gf.ppgame.com/web/pc/images/btn_bg1.png) no-repeat;
+    }
+    .reg{
+        width: 68px;
+        float: right;
+        background: url(http://gf.ppgame.com/web/pc/images/btn_bg1.png) no-repeat;
+    }
+    .query{
+        width: 148px;
+        height: 25px;
+        line-height: 25px;
+        display: inline-block;
+        color: gold;
+        font-size: 14px;
+        text-align: center;
+        margin: 5px 0px;
+        background: url(http://gf.ppgame.com/web/pc/images/btn_bg2.png) no-repeat;
+    }
+    .login, .reg{
+        height: 25px;
+        line-height: 25px;
+        display: inline-block;
+        color: rgb(89, 96, 97);
+        font-size: 14px;
+        text-align: center;
+        margin: 5px 0px;
+    }
+    .home{
+        height: 700px;
+    }
+    .erweima{
+        width: 117px;
+        height: 116px;
+        overflow: hidden;
+        position: relative;
+        float: left;
+    }
+    .download_s{
+        width: 177px;
+        margin: 0px 8px;
+        float: left;
+    }
+    .download_s a{
+    width: 100%;
+    height: 52px;
+    display: inline-block;
+    }
+    .appstore{
+        background: url(http://gf.ppgame.com/web/pc/images/download_ios.png) no-repeat;
+        margin-bottom: 6px;
+        margin-top: 0px;
+    }
+    .android{
+        background: url(http://gf.ppgame.com/web/pc/images/download_android.png) no-repeat;
+        margin-top: 5px;
+    }
+    .download{
+        width: 558px;
+        height: 116px;
+        padding: 15px 15px;
+        border: 1px solid rgba(255,255,255,0.25);
+        background-color: rgba(0,0,0,0.25);
+        margin-left: 200px;
+        float: left;
+    }
+    .taptap{
+        width: 117px;
+        height: 116px;
+        display: inline-block;
+        background: url(http://gf.ppgame.com/web/pc/images/download_tap.png) no-repeat;
+        margin-top: 0;
+    }
+    .pc{
+        width: 117px;
+        height: 116px;
+        display: inline-block;
+        background: url(http://gf.ppgame.com/web/pc/images/download_pc.png) no-repeat;
+        margin-top: 0;
+        margin-left: 12px;
+    }
+    .red_move {
+        width: 108px;
+        height: 2px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgb(192, 31, 31) 0px 0px 6px, rgb(192, 31, 31) 0px 0px 7px, rgb(192, 31, 31) 0px 0px 8px, rgb(192, 31, 31) 0px 0px 9px;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%, 0px);
+        animation: 3s linear 0s infinite alternate none running moveLine;
+    }
+    .news1 {
+        width: 690px;
+        height: 413px;
+        padding: 25px 28px;
+        position: absolute;
+        background: url(http://gf.ppgame.com/web/pc/images/banner_box.png) no-repeat;
+        margin: 320px 160px;
+    }
+    .news1 .picture_all {
+        height: 363px;
+    }
+    .news1_all {
+        position: relative;
+    }
+    .picture_all {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
     }
 </style>
 <body style="height: 2000px;"> 
     <div class="div1">
+        <div class="title_space">
+        <div class="logo">
+            <img src="http://gf.ppgame.com/web/pc/images/logo.png" alt="少女前线logo">
+        </div>
+        <div class="actor">
+                <a class="login" href="#">登录</a>
+                <a class="reg" href="#">注册</a>
+                <a class="query" href="#">账号自助查询</a>
+        </div>
         <div class="div2">
-        <ul>
-            <li class="item"><a href="#">首页</a></li>
-            <li class="item"><a href="#">情报局</a></li>
-            <li class="item"><a href="#">图鉴</a></li>
-            <li class="item"><a href="#">图册</a></li>
-            <li class="item"><a href="#">世界观</a></li>
-            <li class="item"><a href="#">时间线</a></li>
-            <li class="item"><a href="#">16LAB研究院</a></li>
+        <ul class="nav title_form">
+            <li class="item active"><a href="#">首页<span class="yellow_line"></span></a></li>
+            <li class="item"><a href="#">情报局<span class="yellow_line"></span></a></li>
+            <li class="item"><a href="#">图鉴<span class="yellow_line"></span></a></li>
+            <li class="item"><a href="#">图册<span class="yellow_line"></span></a></li>
+            <li class="item"><a href="#">世界观<span class="yellow_line"></span></a></li>
+            <li class="item"><a href="#">时间线<span class="yellow_line"></span></a></li>
+            <li class="item"><a href="#">16LAB研究院<span class="yellow_line"></span></a></li>
         </ul>
+        </div>
         </div>
     </div>
     <div class="div3">
+        <div class="home"></div>
+        <div class="download">
+            <div class="erweima"> 
+                <img src="http://gf.ppgame.com/CKFinderJava/1/files/xiazai0706(1).png" width="117px" height="116px" alt="下载二维码">
+                <div class="red_move"></div>
+            </div>
+            <div class="download_s">
+                <a class="appstore" href="https://lnk0.com/E18Eho" title="苹果下载"></a>
+                <a class="android" href="https://lnk0.com/tINNVp" title="安卓下载"></a>
+            </div>
+            <div class="download_t">
+                <a class="taptap" href="https://www.taptap.com/app/10505" title="TapTap专区下载"></a>
+            </div>
+            <div class="download_p">
+                <a class="pc" href="https://a11.gdl.netease.com/MuMuInstaller_1.0.22.0_27d49d_yxsn_zh-Hans_1552988053.exe" title="PC下载"></a>
+            </div>
+        </div>
     </div>
-    
+    <div class="div4">
+        <div class="news1">
+            <div class="picture_all">
+                <div class="picture">
+                    <a href="http://gf.ppgame.com/web/pc/info.html?id=4060" target="_blank">
+                        <img src="http://gf.ppgame.com/CKFinderJava/1/files/634X363-2.jpg" alt="全新调酒玩法" title="全新调酒玩法"></a>
+                </div>
+                <div class="picture">
+                    <a href="http://gf.ppgame.com/web/pc/info.html?id=4105" target="_blank">
+                        <img src="http://gf.ppgame.com/CKFinderJava/1/files/634X363(1).jpg" alt="联动奖励列表" title="联动奖励列表"></a>
+                </div>
+                <div class="picture">
+                    <a href="http://gf.ppgame.com/web/pc/info.html?id=3612" target="_blank">
+                        <img src="http://gf.ppgame.com/CKFinderJava/1/files/634X363(2).jpg" alt="随机抽取类玩法概率公示说明" title="随机抽取类玩法概率公示说明"></a>
+                </div>
+            </div>
+            <div class="news1_all">
+                <ol class="lunbo">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+        <div class="news2"></div>
+    </div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+    <div class="div7"></div>
+    <div class="div8"></div>
 <a href="">首页</a>
 </body>
 </html>
