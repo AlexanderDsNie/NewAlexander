@@ -11,6 +11,9 @@
         margin: 0px;
         padding: 0;
     }
+    body{
+        background: #ffffff
+    }
     img {
         vertical-align: middle;
     }
@@ -31,8 +34,9 @@
     }
     a{
         float: left;
-        width: 90px;
+        width: 60px;
         font-size: 20px;
+        line-height: 20px;
         font-family: "微软雅黑";
         text-decoration:none;
         text-align: center;
@@ -49,7 +53,7 @@
     }
     .title_space {
         height: 90px;
-        width: 1200px;
+        width: 1170px;
         padding-right: 15px;
         padding-left: 15px;
         margin-right: auto;
@@ -83,6 +87,9 @@
         left: 0;
         top: 0;
         background-color: black;
+        border-width: 0 0 1px 0;
+        border-color: #596061;
+        font-family: "微软雅黑";
     }
     .div2{
         float: right;
@@ -102,7 +109,7 @@
         color: gold;
     }
     .yellow_line{
-        width: 85%;
+        width: 89%;
         height: 0px;
         position: absolute;
         bottom: 0px;
@@ -154,11 +161,11 @@
         padding-top: 10px;
     }
     .login{
-        width: 68px;
+        width: 66px;
         background: url(http://gf.ppgame.com/web/pc/images/btn_bg1.png) no-repeat;
     }
     .reg{
-        width: 68px;
+        width: 66px;
         float: right;
         background: url(http://gf.ppgame.com/web/pc/images/btn_bg1.png) no-repeat;
     }
@@ -171,7 +178,11 @@
         font-size: 14px;
         text-align: center;
         margin: 5px 0px;
-        background: url(http://gf.ppgame.com/web/pc/images/btn_bg2.png) no-repeat;
+        background: url(http://gf.ppgame.com/web/pc/images/btn_bg2_on.png) no-repeat;
+    }
+    .query:hover{
+        text-decoration: none;
+        color: gold;
     }
     .login, .reg{
         height: 25px;
@@ -182,8 +193,14 @@
         text-align: center;
         margin: 5px 0px;
     }
+    .login:hover, .reg:hover{
+        text-decoration: none;
+        color: #ffc000;
+        background: url(http://gf.ppgame.com/web/pc/images/btn_bg1_on.png) no-repeat;
+        background-size: 100% 100%;
+    }
     .home{
-        height: 700px;
+        height: 730px;
     }
     .erweima{
         width: 117px;
@@ -215,6 +232,7 @@
         width: 558px;
         height: 116px;
         padding: 15px 15px;
+        position: relative;
         border: 1px solid rgba(255,255,255,0.25);
         background-color: rgba(0,0,0,0.25);
         margin-left: 200px;
@@ -265,6 +283,18 @@
         width: 100%;
         overflow: hidden;
     }
+    .left_top{
+        border-top: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
+        left: -1px;
+        top: -1px;
+    }
+    .right_bottom{
+        border-right: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        right: -1px;
+        bottom: -1px;
+    }
 </style>
 <body style="height: 2000px;"> 
     <div class="div1">
@@ -307,6 +337,8 @@
             <div class="download_p">
                 <a class="pc" href="https://a11.gdl.netease.com/MuMuInstaller_1.0.22.0_27d49d_yxsn_zh-Hans_1552988053.exe" title="PC下载"></a>
             </div>
+            <span class="left_top"></span>
+            <span class="right_bottom"></span>
         </div>
     </div>
     <div class="div4">
