@@ -86,7 +86,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        background-color: black;
+        background-color: #191919;
         border-width: 0 0 1px 0;
         border-color: #596061;
         font-family: "微软雅黑";
@@ -278,11 +278,26 @@
     .news1_all {
         position: relative;
     }
+    .news2{
+        width: 550px;
+        height: 372px;
+        float: right;
+        margin-top: 324px;
+        margin-right: 133px;
+        padding: 15px 0px 15px 34px;
+        background: url(http://gf.ppgame.com/web/pc/images/news_box.png) right no-repeat;
+    }
+    .carousel {
+        position: relative;
+    }
     .picture_all {
         position: relative;
         width: 100%;
         overflow: hidden;
     }
+    /* .news1 .picture_all >.item{
+        width: 100%;
+    } */
     .left_top{
         border-top: 2px solid #ffffff;
         border-left: 2px solid #ffffff;
@@ -310,12 +325,12 @@
         <div class="div2">
         <ul class="nav title_form">
             <li class="item active"><a href="#">首页<span class="yellow_line"></span></a></li>
-            <li class="item"><a href="#">情报局<span class="yellow_line"></span></a></li>
-            <li class="item"><a href="#">图鉴<span class="yellow_line"></span></a></li>
-            <li class="item"><a href="#">图册<span class="yellow_line"></span></a></li>
-            <li class="item"><a href="#">世界观<span class="yellow_line"></span></a></li>
+            <li class="item"><a href="http://gf.ppgame.com/web/pc/news.html?type=1">情报局<span class="yellow_line"></span></a></li>
+            <li class="item"><a href="http://www.gfwiki.org/index.php?title=%E9%A6%96%E9%A1%B5" target="_blank">图鉴<span class="yellow_line"></span></a></li>
+            <li class="item"><a href="http://gf.ppgame.com/web/pc/av.html" target="_blank">图册<span class="yellow_line"></span></a></li>
+            <li class="item"><a href="http://gf.ppgame.com/web/pc/index.html#indexView">世界观<span class="yellow_line"></span></a></li>
             <li class="item"><a href="#">时间线<span class="yellow_line"></span></a></li>
-            <li class="item"><a href="#">16LAB研究院<span class="yellow_line"></span></a></li>
+            <li class="item"><a href="https://bbs.nga.cn/thread.php?fid=-547859&rand=904" target="_blank">16LAB研究院<span class="yellow_line"></span></a></li>
         </ul>
         </div>
         </div>
@@ -343,6 +358,7 @@
     </div>
     <div class="div4">
         <div class="news1">
+            <div class="carousel slide" data-ride="carousel" data-interval="3000">
             <div class="picture_all">
                 <div class="picture">
                     <a href="http://gf.ppgame.com/web/pc/info.html?id=4060" target="_blank">
@@ -364,6 +380,7 @@
                     <li></li>
                 </ol>
             </div>
+        </div>
         </div>
         <div class="news2"></div>
     </div>
