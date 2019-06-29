@@ -262,7 +262,9 @@
         top: 10px;
         left: 50%;
         transform: translate(-50%, 0px);
-        animation: 3s linear 0s infinite alternate none running moveLine;
+        -webkit-transform: translate(-50%, 0px);
+        animation: moveLine 3s linear infinite alternate;
+        -webkit-animation: moveLine 3s linear infinite alternate;
     }
     .news1 {
         width: 690px;
@@ -309,6 +311,16 @@
         border-bottom: 2px solid #ffffff;
         right: -1px;
         bottom: -1px;
+    }   
+    @keyframes moveLine 
+    {
+        from {top:0px;}
+        to {top:116px;}
+    }
+    @-webkit-keyframes moveLine 
+    {
+        from {top:0px;}
+        to {top:116px;}
     }
 </style>
 <body style="height: 2000px;"> 
