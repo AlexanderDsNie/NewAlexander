@@ -1,0 +1,38 @@
+#header{
+    height: 32px;
+    background: #a9180a;
+}
+.header_login{
+    float: left;
+}
+.header_login,.header_menu{
+    height: 32px;
+    line-height: 32px;
+}
+.header_login span,.header_login a{
+    color: #fff;
+    font-size: 12px;
+}
+.header_login a{
+    text-decoration: none;
+    padding: 0 10px 0 20px;
+}
+.header_menu > li > a{
+    color: #fff;
+    text-decoration: none;
+}
+.header_menu{
+    float: right;
+}
+.header_menu > li{
+    float: left;
+    padding: 0 14px 0 10px;
+}
+.mytaobao_1{
+    position: relative;
+}
+.menu_item{
+    height: 32px;
+    border-color: #a9180a;
+}
+
