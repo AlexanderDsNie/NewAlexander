@@ -45,6 +45,10 @@
     border-top:none;
     display: none;
 }
+.list_1:hover{
+    color: #ff0036;
+    text-decoration: underline;
+}
 .list_2{
     width: 72px;
     line-height: 20px;
@@ -61,4 +65,7 @@
 .list-arrow:hover > a{
     color:#ff0036;
     text-decoration: underline;
+}
+.list-arrow:hover .arrow{
+    transform: rotate(180deg);
 }
