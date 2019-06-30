@@ -45,12 +45,12 @@
     border-top:none;
     display: none;
 }
-.list_1:hover{
-    color: #ff0036;
-    text-decoration: underline;
-}
 .list_2{
     width: 72px;
+    line-height: 20px;
+}
+.list_3{
+    width: 60px;
     line-height: 20px;
 }
 .list_1 > li >a{
@@ -66,7 +66,99 @@
     color:#ff0036;
     text-decoration: underline;
 }
+.list_1 .list_4:hover{
+    color: #ff0036;
+    text-decoration: underline;
+}
 .list-arrow:hover .arrow{
     transform: rotate(180deg);
     transform-origin: 50% 25%;
+}
+.header_item:hover{
+    color: gold;
+}
+/* .hang{
+    width: 1px;
+    height: 15px;
+    background: #999;
+    float: left;
+    position: relative;
+} */
+.logo{
+    width: 240px;
+    height: 130px;
+    float: left;
+}
+.search-box{
+    float: left;
+    margin: 38px 96px;
+    overflow: hidden;
+}
+.search_1{
+    width: 623px;
+    height: 36px;
+    border: 2px solid #ff0036;
+}
+.search_input{
+    width: 491px;
+    height: 36px;
+    border:none;
+    outline: none;
+    text-indent: 5px;
+    float: left;
+}
+.search_2{
+    width: 132px;
+    height: 36px;
+    float: right;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700px;
+    background: #ff0036;
+    border:none;
+    letter-spacing: 10px;
+}
+.search_3 li{
+    float: left;
+    margin-top:3px; 
+    padding: 0 12px;
+    position: relative;
+    left: -12px;
+}
+.search_3 li::after{
+    content: "";
+    width: 1px;
+    height: 15px;
+    background: #999;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+.search_3 li a{
+    color: #999;
+    font-size: 14px;
+}
+.search_3 li.hot a{
+    color: #ff0036;
+}
+.nav{
+    padding-left: 200px;
+    width: 1030px;
+}
+.nav li{
+    float: left;
+}
+.nav li img{
+    width: 100px;
+    height: 30px;
+    margin-top: 3px;
+}
+.nav a{
+    color: #333;
+    font-size: 16px;
+    font-weight: 500px;
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    padding :0 8px;
 }

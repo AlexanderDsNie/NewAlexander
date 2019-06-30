@@ -15,6 +15,7 @@ ul{
 .wrapper{
     width: 1230px;
     margin: 0 auto;    
+    overflow: hidden;
 }
 .iconfont {
     font-family: "iconfont" !important;
