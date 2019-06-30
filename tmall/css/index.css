@@ -28,11 +28,37 @@
     float: left;
     padding: 0 14px 0 10px;
 }
-.mytaobao_1{
-    position: relative;
-}
 .menu_item{
     height: 32px;
     border-color: #a9180a;
 }
-
+.list-arrow{
+    position: relative;
+}
+.list_1{
+    position: absolute;
+    left:0px;
+    top:32px;
+    background: #fff;
+    padding: 10px;
+    border:1px solid #ccc;
+    border-top:none;
+    display: none;
+}
+.list_2{
+    width: 72px;
+    line-height: 20px;
+}
+.list_1 > li >a{
+    color: #999;
+}
+.list-arrow:hover .list_1{
+    display: block;
+}
+.list-arrow:hover{
+    background: #fff;
+}
+.list-arrow:hover > a{
+    color:#ff0036;
+    text-decoration: underline;
+}
