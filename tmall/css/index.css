@@ -68,4 +68,5 @@
 }
 .list-arrow:hover .arrow{
     transform: rotate(180deg);
+    transform-origin: 50% 25%;
 }
