@@ -26,6 +26,9 @@
 }
 .header_menu > li{
     float: left;
+    /* padding: 0 14px 0 10px; */
+}
+.free{
     padding: 0 14px 0 10px;
 }
 .menu_item{
@@ -77,13 +80,17 @@
 .header_item:hover{
     color: gold;
 }
-/* .hang{
+.hang{
     width: 1px;
-    height: 15px;
-    background: #999;
+    height: 14px;
+    background: #fff;
     float: left;
     position: relative;
-} */
+    top: 8px;
+}
+.logo-box{
+    overflow: hidden;
+}
 .logo{
     width: 240px;
     height: 130px;
