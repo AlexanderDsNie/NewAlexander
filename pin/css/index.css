@@ -84,6 +84,7 @@ li{
     height: 1rem;
     background: #ffffff;
     margin: 0.1rem 0 0 0;
+    overflow: hidden; 
 }
 .five_1_1{
     float: left;
