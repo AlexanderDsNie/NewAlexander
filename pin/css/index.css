@@ -177,22 +177,20 @@ li{
     margin: 0.3rem 0 0 0;
 }
 .five_4{
-    width: 7.5rem;
-    height: 4.5rem;
+    width: 7.1rem;
+    height: 9rem;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
     background: #ffffff;
+    padding:0 0.2rem;
 }
-.five_4_1,.five_4_2{
+.five_4_0{
     float: left;
     width: 3.5rem;
     height: 4.5rem;
 }
-.five_4_1{
-    margin: 0 0.05rem 0 0.2rem;
-}
-.five_4_2{
-    margin: 0 0.2rem 0 0.05rem;
-}
-.five_x{
+.five .five_4 img{
     width: 3.5rem;
     height: 3.5rem;
 }
@@ -214,11 +212,6 @@ li{
     color: #999999;
     margin: -0.1rem 0 0 0;
 }
-.five_5{
-    width: 7.5rem;
-    height: 4.5rem;
-    background: #ffffff;
-}
 .footer{
     position: fixed;
     left: 0px;
@@ -228,19 +221,19 @@ li{
     background-color: #ffffff;
     border-top:1px solid #999999;
 }
-.footer_1{
+.footer_0{
     float: left;
     width: 1.5rem;
     height: 0.99rem;
     text-align: center;
 }
-.footer .footer_1 img{
+.footer .footer_0 img{
     width: 0.4rem;
     height: 0.4rem;
     float: left;
     margin: 0.14rem 0 0 0.54rem;
 }
-.footer .footer_1 span{
+.footer .footer_0 span{
     float: left;
     width:0.6rem;
     height:0.19rem;
