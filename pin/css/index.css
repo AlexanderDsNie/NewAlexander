@@ -5,7 +5,7 @@
 li{
     list-style: none;
 }
-.header{
+.one{
     height: 0.48rem;
     background: #ffffff;
     display: flex;
@@ -26,11 +26,11 @@ li{
     height: 0.3rem;
     margin: 0.1rem 0 0 0.22rem;
 }
-.body{
+.two{
     width: 7.5rem;
     height: 3.9rem;
 }
-#body_1{
+#two_1{
     width: 7.5rem;
     height: 3.9rem;
 }
@@ -65,8 +65,8 @@ li{
 .four{
     width: 7.5rem;
     height: 1.8rem;
-    display: flex;
     background: #ffffff;
+    overflow: hidden;
 }
 #four_p{
     width: 7.1rem;
@@ -76,21 +76,18 @@ li{
 .five{
     width: 7.5rem;
     height: 15rem;
-    display: flex;
     background: #eeeeee;
+    overflow: hidden;
 }
 .five_1{
     width: 7.5rem;
     height: 1rem;
     background: #ffffff;
+    border: none;
     margin: 0.1rem 0 0 0;
-    overflow: hidden; 
 }
 .five_1_1{
     float: left;
-    position: relative;
-    top: 0;
-    left: 0;
     margin: 0.25rem 0 0 0.2rem;
 } 
 #zuan,#love{
@@ -118,28 +115,25 @@ li{
     color: #999999;
     margin: 0.61rem 0 0 -1.1rem;
 }
-#right_1{
+.right_0{
     float: right;
     width: 0.14rem;
     height: 0.24rem;
-    /* position: relative;
-    top: 0.38rem;
-    right: 0.2rem; */
     margin: 0.38rem 0.2rem 0 0;
 }
 .five_2{
     width: 7.5rem;
     height: 3.3rem;
-    position: absolute;
-    top:9.29rem;
     background: #ffffff;
+    border: none;
+    /* overflow: hidden; */
 }
 .five_3{
     width: 7.5rem;
     height: 1rem;
     background: #ffffff;
-    position: absolute;
-    top: 12.69rem;
+    margin: 0.1rem 0 0 0;
+    /* overflow: hidden; */
 }
 .five_2_0{
     width: 7.5rem;
@@ -187,8 +181,6 @@ li{
 .five_4{
     width: 7.5rem;
     height: 4.5rem;
-    position: absolute;
-    top: 13.69rem;
     background: #ffffff;
 }
 .five_4_1,.five_4_2{
@@ -227,8 +219,6 @@ li{
 .five_5{
     width: 7.5rem;
     height: 4.5rem;
-    position: absolute;
-    top: 18.19rem;
     background: #ffffff;
 }
 .footer {
@@ -240,13 +230,13 @@ li{
     background-color: #ffffff;
     border-top:1px solid #999999;
 }
-.footer_d{
+.footer_1{
     float: left;
     width: 1.5rem;
     height: 0.99rem;
     text-align: center;
 }
-.ddd{
+.footer .footer_1 img{
     width: 0.4rem;
     height: 0.4rem;
     float: left;
@@ -262,6 +252,6 @@ li{
     color: #999999;
     margin: 0.6rem 0 0 -0.5rem;
 }
-.s_red{
+.footer_red{
     color: #EF1C00;
 }
