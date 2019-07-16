@@ -219,7 +219,7 @@ li{
     height: 4.5rem;
     background: #ffffff;
 }
-.footer {
+.footer{
     position: fixed;
     left: 0px;
     bottom: 0px;
@@ -240,7 +240,7 @@ li{
     float: left;
     margin: 0.14rem 0 0 0.54rem;
 }
-.item{
+.footer .footer_1 span{
     float: left;
     width:0.6rem;
     height:0.19rem;
@@ -250,6 +250,6 @@ li{
     color: #999999;
     margin: 0.6rem 0 0 -0.5rem;
 }
-.footer_red{
+#footer_red{
     color: #EF1C00;
 }
