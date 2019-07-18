@@ -385,18 +385,71 @@ body{
 .thirty{
     margin-top: 5px;
 }
-.thirty_0{
+.thirty_0, .thirty_1{
     width: 122px;
     height: 108px;
     margin-right: 1px;
     margin-bottom: 1px;
-    line-height: 108px;  
     text-align: center;
     float: left;
+    position: relative;
     background: #ffffff;
 }
 .thirty img{
     width: 82%;
     height: 50px;
     margin: 29px auto;
+}
+
+.iconfont_t{
+    width: 40px;
+    height: 40px;
+    color: #999;
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 40px;
+    float: left;
+    margin: 10px 41px 0 41px;
+}
+.thirty_1_1{
+    font-size:16px;
+    text-align: center;
+    color: #999;
+    margin: 10px 0 ;
+}
+.thirty_0_0{
+    width: 122px;
+    height: 108px; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    opacity: 0; 
+    transition: opacity 0.35s linear ;
+}
+.thirty_0_1{
+    width: 108px;
+    height: 18px;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 35px auto 0;
+}
+.thirty_0_2{
+    background: #ff0036;
+    color:#fff;
+    width: 63px;
+    height: 18px;
+    margin:10px auto 0px;
+    border-radius: 10px;
+}
+.thirty_0_0:hover{
+    opacity: 1;
+}
+.thirty_1:hover{
+    color: #ffffff;
+    background: #ff0036;
 }
