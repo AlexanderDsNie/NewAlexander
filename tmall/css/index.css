@@ -715,3 +715,118 @@ body{
     color: #000000;
     margin: 5px 0 0 10px;
 }
+.footer{
+    width: 1519px;
+    height: 643px;
+    margin: 20px 0 0 0;
+    overflow: hidden;
+    border-top: 1px solid #D1D7DC;
+    background: #ffffff;
+}
+.footer_1{
+    width: 1190px;
+    height: 110px;
+    margin: 25px auto;
+}
+.footer_2{
+    width: 1190px;
+    height: 213px;
+    border-top: 1px solid #ededed;
+    background: url(../images/logo_bottom.png) 45px bottom no-repeat;
+    background-size: 68px 25px;
+    padding: 22px 0 0 ;
+    margin: 0 auto;
+}
+.footer_2_0{
+    width: 186px;
+    height: 90px;
+    float: left;
+    font-family: 微软雅黑;
+    padding: 0 0 0 52px;
+}
+.footer_2_1{
+    width: 186px;
+    height: 30px;
+    float: left;
+    color: #646464;
+    text-align: left;
+    font-size:16px;
+    font-weight: 700;
+    line-height: 30px;
+}
+.footer_2_2{
+    width: 100px;
+    height: 20px;
+    float: left;
+    overflow: hidden;
+    text-align: left;
+    line-height: 20px;
+    color: #8b8b8b;
+}
+.footer_2_0 img{
+    width: 105px;
+    height: 105px;
+    float: left;
+    margin: 5px 5px;
+}
+.footer_3{
+    width: 1519px;
+    height: 262px;
+    background: #000000;
+    border-top: 2px solid #FF0036;
+}
+.footer_3_0{
+    width: 1190px;
+    margin: 0 auto;
+}
+.footer_3_1{
+    width: 1190px;
+    height: 24.8px;
+    float: left;
+    line-height: 25px;
+    padding :5px 0;
+    margin: 0 auto;
+}
+.footer_3_1 a{
+    width: 48px;
+    height: 16px;
+    color: #ffffff;
+    font-size: 12px;
+    margin: 0 3px 0 0 ;
+}
+.footer_3_2{
+    color: #ffffff;
+}
+.footer_3_2 a{
+    width: 48px;
+    height: 16px;
+    color: #ffffff;
+    font-size: 12px;
+    margin: 0 3px 0 0 ;
+}
+.footer_3_3{
+    width: 1190px;
+    height: 150px;
+    color: #a4a4a4;
+    font-size: 12px;
+    margin: 20px 0;
+}
+.footer_3_phone{
+    height: 16px;
+    line-height: 20px;
+    margin: 0 65px 0 0 ;
+}
+.footer_3_phone img{
+    width: 20px;
+    height: 20px;
+    margin: 3px 0 0 0;
+}
+.footer_3_bottom{
+    height: 16px;
+    line-height: 20px;
+    color: #686868;
+}
+.footer_3_img{
+    margin: 10px 10px 0 0 ;
+}
+
