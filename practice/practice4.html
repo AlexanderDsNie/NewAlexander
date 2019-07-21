@@ -125,8 +125,18 @@
         // }
         // alert("=" + s);
 
+        var i, j;
+        for (j = 1; j <= 5; j++) {
+            for (i = 1; i <= 5 - j; i++) {
+                document.write("&nbsp;");
+            }
+            for (i = 1; i <= j; i++) {
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
 
-        
+
     </script>
 </body>
 
