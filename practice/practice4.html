@@ -179,7 +179,20 @@
         // }
         // main(x,y);
 
-
+        function CollectDigits(s){
+                var result = "";
+                for(var i=0; i<s.length; i++){
+                    var char = s.charAt(i);  //"1"
+                    if(char >=0 && char <=9){
+                        result+= char;
+                    }
+                }
+                return result;
+            }
+            // var str = "absd";
+            // str.charAt(index)  //字符
+            // str.indexOf('a')  //索引
+            console.log(CollectDigits("1a2bc23def4"));
 
     </script>
 </body>
