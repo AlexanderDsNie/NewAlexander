@@ -22,12 +22,20 @@
         }
 
         #lun_img {
-            width: 600px;
+            width: 3000px;
             height: 200px;
-            background: #ffffff;
+            position: absolute;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            transition: left 1s linear;
         }
 
-        #lun_img img {
+        #lun_img a {
+            float: left;
+        }
+
+        #lun_img a img {
             width: 600px;
             height: 200px;
             float: left;
@@ -63,13 +71,10 @@
             margin-right: 5px;
             background: rgba(0, 0, 0, 0.5);
             border-radius: 4px;
+            cursor: pointer;
         }
 
-        #lun_img a {
-            display: none;
-        }
-
-        #lun_img .selected {
+        #lun_img a img {
             display: block;
         }
 
@@ -112,12 +117,12 @@
         var now = 0;
 
         for (var i = 0; i < btn2.length; i++) {
-            btn2[i].index = i;
+            btn2[i].idx = i;
             btn2[i].onclick = function () {
-                change(this.index);
+                change(this.idx);
+                now = this.idx;
             }
         }
-
         btn5.onclick = function () {
             now++;
             if (now == btn2.length) {
@@ -125,7 +130,6 @@
             }
             change(now);
         }
-
         btn6.onclick = function () {
             now--;
             if (now == -1) {
@@ -133,24 +137,12 @@
             }
             change(now);
         }
-
         function change(index) {
-            for (var i = 0; i < btn2.length; i++) {
-                btn2[i].className = "";
-                btn4[i].className = "";
+            for (var j = 0; j < btn2.length; j++) {
+                btn2[j].className = "";
             }
             btn2[index].className = "active";
-            btn4[index].className = "selected";
-        }
-
-        var timer = setInterval(btn5.onclick,1000);
-
-        btn0.onmouseout = function(){
-            timer = setInterval(btn5.onclick,1000);
-        }
-
-        btn0.onmouseover = function(){
-            clearInterval(timer);
+            btn3.style.left = -index * 600 + "px";
         }
 
     </script>
