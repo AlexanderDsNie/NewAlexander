@@ -89,8 +89,8 @@
             <a><img src="img/5.jpg" alt=""></a>
         </div>
         <div id="lun_r">
-            <div class="lun_left">&lt</div>
-            <div class="lun_right">&gt</div>
+            <div id="lun_left">&lt</div>
+            <div id="lun_right">&gt</div>
         </div>
         <div id="lun_1">
             <div class="active">1</div>
@@ -106,22 +106,41 @@
         var btn2 = btn1.getElementsByTagName('div');
         var btn3 = document.getElementById('lun_img');
         var btn4 = btn3.getElementsByTagName('a');
+        var btn5 = document.getElementById('lun_right');
+        var btn6 = document.getElementById('lun_left');
+        var now = 0;
+
         for (var i = 0; i < btn2.length; i++) {
             btn2[i].index = i;
             btn2[i].onclick = function () {
-                for (var j = 0; j < btn2.length; j++) {
-                    btn2[j].className = "";
-                    btn4[j].className = "";
-                }
-                this.className = "active";
-                btn4[this.index].className = "selected";
+                change(this.index);
             }
         }
 
-        var btn5 = document.getElementsByClassName('lun_r');
-        var btn6 = btn5.getElementsByTagName('lun_left');
-        var btn7 = btn5.getElementsByTagName('lun_right');
+        btn5.onclick = function () {
+            now++;
+            if (now == btn2.length) {
+                now = 0;
+            }
+            change(now);
+        }
 
+        btn6.onclick = function () {
+            now--;
+            if (now == -1) {
+                now = btn2.length - 1;
+            }
+            change(now);
+        }
+
+        function change(index) {
+            for (var i = 0; i < btn2.length; i++) {
+                btn2[i].className = "";
+                btn4[i].className = "";
+            }
+            btn2[index].className = "active";
+            btn4[index].className = "selected";
+        }
 
     </script>
 </body>
