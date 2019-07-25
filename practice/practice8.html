@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #all {
+            width: 800px;
+            height: 400px;
+        }
+
+        #box_left,
+        #box_right {
+            width: 400px;
+            height: 400px;
+            float: left;
+            overflow: hidden;
+        }
+
+        #box_left {
+            position: relative;
+        }
+
+        #drag {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
 </head>
+
 <body>
-    <div></div>
+    <div id="all">
+        <div id="box_left">
+            <img src="images/1.jpg" alt="">
+            <span id="drag"></span>
+        </div>
+        <div id="box_right">
+            <img src="images/2.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        var btn1 = document.getElementById('box_left');
+        var btn2 = document.getElementById('box_right');
+        var btn3 = document.getElementById('drag');
+
+        btn1.onmouseover = function () {
+            btn2.style.display = "block";
+            btn3.style.display = "block";
+        }
+
+        btn1.onmousemove = function (e) {
+            btn3.style.left = e.clientX - btn3.offsetWidth / 2 + "px";
+            btn3.style.top = e.clientY - btn3.offsetHeight / 2 + "px";
+        }
+    </script>
 </body>
+
 </html>
