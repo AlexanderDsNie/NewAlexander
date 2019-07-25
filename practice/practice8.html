@@ -31,6 +31,13 @@
 
         #box_right {
             display: none;
+            position: relative;
+        }
+
+        #box_img {
+            position: absolute;
+            left: 0;
+            top: 0;
         }
 
         #drag {
@@ -52,7 +59,7 @@
             <span id="drag"></span>
         </div>
         <div id="box_right">
-            <img src="images/2.jpg" alt="">
+            <img id="box_img" src="images/2.jpg" alt="">
         </div>
     </div>
 
@@ -60,6 +67,7 @@
         var btn1 = document.getElementById('box_left');
         var btn2 = document.getElementById('box_right');
         var btn3 = document.getElementById('drag');
+        var btn4 = document.getElementById('box_img');
 
         btn1.onmouseover = function () {
             btn2.style.display = "block";
@@ -87,9 +95,14 @@
             if (btn3.offsetTop >= max_t) {
                 btn3.style.top = max_t + "px";
             }
+
+            var small_x = btn1.offsetWidth - btn3.offsetWidth;
+            var big_x = btn4.offsetWidth - btn2.offsetWidth;
+            var small_y = btn1.offsetHeight - btn3.offsetHeight;
+            var big_y = btn4.offsetHeight - btn2.offsetHeight;
+            btn4.style.left = -btn3.offsetLeft / small_x * big_x + "px";
+            btn4.style.top = -btn3.offsetTop / small_y * big_y + "px";
         }
-
-
     </script>
 </body>
 
