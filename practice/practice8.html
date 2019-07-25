@@ -29,6 +29,10 @@
             position: relative;
         }
 
+        #box_right {
+            display: none;
+        }
+
         #drag {
             width: 200px;
             height: 200px;
@@ -36,6 +40,7 @@
             top: 0;
             left: 0;
             background: rgba(255, 255, 255, 0.5);
+            display: none;
         }
     </style>
 </head>
@@ -60,11 +65,31 @@
             btn2.style.display = "block";
             btn3.style.display = "block";
         }
-
+        btn1.onmouseout = function () {
+            btn2.style.display = "none";
+            btn3.style.display = "none";
+        }
         btn1.onmousemove = function (e) {
             btn3.style.left = e.clientX - btn3.offsetWidth / 2 + "px";
             btn3.style.top = e.clientY - btn3.offsetHeight / 2 + "px";
+
+            if (btn3.offsetLeft < 0) {
+                btn3.style.left = "0px";
+            }
+            var max_l = btn1.offsetWidth - btn3.offsetWidth;
+            if (btn3.offsetLeft >= max_l) {
+                btn3.style.left = max_l + "px";
+            }
+            if (btn3.offsetTop < 0) {
+                btn3.style.top = "0px";
+            }
+            var max_t = btn1.offsetHeight - btn3.offsetHeight;
+            if (btn3.offsetTop >= max_t) {
+                btn3.style.top = max_t + "px";
+            }
         }
+
+
     </script>
 </body>
 
