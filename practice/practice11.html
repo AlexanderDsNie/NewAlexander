@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+
+        function leaf() {
+            this.width = Math.random() * 50 + 100;
+            this.pos = {
+                left: Math.random()*(screenWidth - this.width),
+                top: 0
+            }
+            this.speed = 5;
+            var oImg = new Image();
+            oImg.src = "img/" + (Math.floor(Math.random() * 4) + 1) + ".png";
+            oImg.style.width = this.width;
+            oImg.style.left = this.pos.left + "px";
+            oImg.style.top = this.pos.top + "px";
+            this.img = oImg;
+
+        }
+
+        var leaf = new leaf();
+
+        document.body.appendChild(leaf.img);
+
+    </script>
+
+</body>
+
+</html>
