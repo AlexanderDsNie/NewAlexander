@@ -15,7 +15,9 @@
         #red {
             width: 200px;
             height: 200px;
-            float: left;
+            position: absolute;
+            top: 0px;
+            left: 0px;
             background: #ff0036;
         }
     </style>
@@ -25,9 +27,34 @@
     <div id="red"></div>
 
     <script>
-        var btn1=document.getElementById('red');
-
-
+        var btn1 = document.getElementById('red');
+        btn1.onmousedown = function (e) {
+            e = e || window.event;
+            var x = e.clientX - btn1.offsetLeft;
+            var y = e.clientY - btn1.offsetTop;
+            console.log(x)
+            document.onmousemove = function (e) {
+                btn1.style.left = e.clientX - x + "px";
+                btn1.style.top = e.clientY - y + "px";
+                if (btn1.offsetLeft < 0) {
+                    btn1.style.left = "0px";
+                }
+                if (btn1.offsetTop < 0) {
+                    btn1.style.top = "0px";
+                }
+                var xmax = document.documentElement.clientWidth - btn1.offsetWidth;
+                if (btn1.offsetLeft> xmax) {
+                    btn1.style.left = xmax + "px";
+                }
+                var ymax = document.documentElement.clientHeight - btn1.offsetHeight;
+                if (btn1.offsetTop > ymax) {
+                    btn1.style.top = ymax + "px";
+                }
+            }
+        }
+        btn1.onmouseup = function () {
+            document.onmousemove = null;
+        }
     </script>
 </body>
 
