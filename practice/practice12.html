@@ -6,19 +6,97 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        #div1{
-            width: 200px;
-            height: 200px;
-            -webkit-border-radius:5px;
-            -moz-border-radius: 5px;
-            -ms-border-radius: 5px;
-            -o-border-radius: 5px;
-            border-radius: 5px;
-            background: #ff0036;
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .div0{
+            width: 650px;
+            height: 400px;
+            position: relative;
+        }
+        .div0 div{
+            width: 180px;
+            height: 180px;
+            float: left;
+            border-radius: 100px;
+        }
+        .div0 div::after{
+            float: left;
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            border-radius: 100px;
+            content: "";  
+            top:-10px;
+            left:-10px; 
+        }
+        .div1{
+            border: 10px solid blue;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .div1::after{
+            border: 10px solid blue;
+            z-index: 1;
+            border-left-color: transparent;
+        }
+        .div2{
+            border: 10px solid black;
+            position: absolute;
+            top: 0;
+            left: 210px;
+        }
+        .div2::after{
+            border: 10px solid black;
+            z-index: 1;
+            border-left-color: transparent;
+        }
+        .div3{
+            border: 10px solid red;
+            position: absolute;
+            top: 0;
+            left: 420px;
+        }
+        .div3::after{
+            border: 10px solid red;
+            z-index: 1;
+            border-left-color: transparent;
+        }
+        .div4{
+            border: 10px solid yellow;
+            position: absolute;
+            top: 100px;
+            left: 105px;
+        }
+        .div4::after{
+            border: 10px solid yellow;
+            z-index: 2;
+            border-top-color: transparent;
+            border-right-color: transparent;
+        }
+        .div5{
+            border: 10px solid green;
+            position: absolute;
+            top: 100px;
+            left: 315px;
+        }
+        .div5::after{
+            border: 10px solid green;
+            z-index: 2;
+            border-top-color: transparent;
+            border-right-color: transparent;
         }
     </style>
 </head>
 <body>
-    <div id="div1"></div>
+    <div class="div0">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+    </div>
 </body>
 </html>
