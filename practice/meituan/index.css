@@ -4,15 +4,117 @@
 }
 body{
     font-size: 16px;
+    background: #f0efed;
+}
+ul,li{
+    list-style: none;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.eot');
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+        url('iconfont.woff2') format('woff2'),
+        url('iconfont.woff') format('woff'),
+        url('iconfont.ttf') format('truetype'),
+        url('iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+    color: #ffffff;
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .one{
     display: flex;
+    background: #06c1ae;
 }
 .one_1{
-    width: 1.67rem;
+    width:1.67rem;
+    height:1.01rem;
+    line-height: 1.01rem;
+    text-align: center;
+    color:#fff;
 }
 .one_2{
-    
+    flex:1;
+    height:0.64rem;
+    background: #00a494;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color:#68dbce;
+    margin-top:0.2rem;
+}
+.one_3{
+    width:0.94rem;
+    height:1.01rem;
+    line-height: 1.01rem;
+    font-size:10px;
+    text-align: center;
+    color:#fff;
+    float: left;
+}
+.one_2_0{
+    width: 0.25rem;
+    height: 0.64rem;
+    float: left;
+    margin: 0.14rem 0 0 0.12rem;
+}
+.one_2_1{
+    font-size: .26rem;
+    color: #68dbce;
+    padding-left: .6rem;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    margin: 0.15rem 0 0 0;
+}
+.my_span{
+    width: 0.80rem;
+    height: 0.60rem;
+    float: left;
+    font-family: "iconfont" !important;
+    font-size: 0.55rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: -0.09rem 0 0 0.1rem;
+ }
+.one_3_0{
+    float: left;
+    margin:-0.28rem 0 0 0.28rem;
 }
 
-
+.two{
+    width: 7.5rem;
+    height: 2.2rem;
+}
+.two img{
+    width: 7.5rem;
+    height: 2.2rem;
+}
+.three{
+    width: 7.5rem;
+    height: 3rem;
+    margin: 0.02rem 0 0 0;
+}
+.three li{
+    width: 1.5rem;
+    height: 1.62rem;
+    float: left;
+    background: #ffffff;
+}
+.three_1{
+    width:0.8rem;
+    height:0.8rem;
+    background: orange;
+    border-radius: 50%;
+    margin: 0.2rem auto;
+}
+.three_2{
+    text-align: center;
+    font-size: .24rem;
+    color: #666;
+}
