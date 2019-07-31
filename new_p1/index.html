@@ -1,15 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        #photo {
+            background: url(img/bg.jpg);
+            height:100%;
+            position: relative;
+        }
+
+        .box {
+            width: 125px;
+            height: 125px;
+            border: 5px solid #ffffff;
+            position: absolute;
+            top: -135px;
+            left: -135px;
+        }
     </style>
 </head>
+
 <body>
-    
+    <div id="photo"></div>
+    <span id="left"></span>
+    <span id="right"></span>
+    <script>
+        var btn = document.getElementById('photo');
+        var count = 0;
+        for (var i = 0; i < 24; i++) {
+            var oImg = new Image();
+            oImg.onload = function () {
+                count++;
+                if (count == 48) {
+                    loadsuccess();
+                }
+            }
+            oImg.src = "img/thumbs/" + (i + 1) + ".jpg";
+        }
+
+        for (var i = 0; i < 24; i++) {
+            var oImg = new Image();
+            oImg.onload = function () {
+                count++;
+                if (count == 48) {
+                    loadsuccess();
+                }
+            }
+            oImg.src = "img/" + (i + 1) + ".jpg";
+        }
+
+        function loadsuccess() {
+            for (var i = 0; i < 4; i++) {
+                for (var j = 0; j < 6; j++) {
+                    var oDiv = document.createElement('div');
+                    oDiv.style.background = "url(img/thumbs/" + (i*6 +j+ 1) + ".jpg)";
+                    oDiv.className = "box";
+                    oDiv.row = i;
+                    oDiv.col = j;
+                    btn.appendChild(oDiv);
+                }
+            }
+
+            var aBox = document.getElementsByClassName('box');
+            var oBoxWidth = aBox[0].offsetWidth;
+            var oBoxHeight =  aBox[0].offsetHeight;
+            var disX = (photo.offsetWidth - 6*oBoxWidth)/7;
+            var disY = (photo.offsetHeight - 4*oBoxHeight)/5;
+            for(var i=0; i<aBox.length; i++){
+                aBox[i].style.left =  (aBox[i].col+1)*disX + aBox[i].col*oBoxHeight+ "px";
+                aBox[i].style.top = (aBox[i].row+1)*disY + aBox[i].row*oBoxWidth+ "px";
+            }
+
+        }
+
+        
+
+    </script>
 </body>
+
 </html>
