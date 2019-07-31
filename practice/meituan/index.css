@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 16px;
+}
+.one{
+    display: flex;
+}
+.one_1{
+    width: 1.67rem;
+}
+.one_2{
+    
+}
+
+
