@@ -30,6 +30,7 @@
             position: absolute;
             top: -135px;
             left: -135px;
+            transition: all 2s ease;
         }
     </style>
 </head>
@@ -81,10 +82,11 @@
             var disX = (photo.offsetWidth - 6*oBoxWidth)/7;
             var disY = (photo.offsetHeight - 4*oBoxHeight)/5;
             for(var i=0; i<aBox.length; i++){
-                aBox[i].style.left =  (aBox[i].col+1)*disX + aBox[i].col*oBoxHeight+ "px";
+                aBox[i].style.transitionDelay = (aBox.length-i)*100+"ms";
+                aBox[i].style.transform = "rotate("+(Math.random()-0.5)*40+"deg)";
+                aBox[i].style.left = (aBox[i].col+1)*disX + aBox[i].col*oBoxHeight+ "px";
                 aBox[i].style.top = (aBox[i].row+1)*disY + aBox[i].row*oBoxWidth+ "px";
             }
-
         }
 
         
