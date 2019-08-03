@@ -71,12 +71,13 @@
             <div>娱乐</div>
         </div>
     </div>
+    <script src="jquery-1.12.4.js"></script>
     <script>
-        var btn1 = document.getElementById('div1');
-        
-
-
-
+        $('#ul_0 li').on('click', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+            $('#div1 div').eq($(this).index()).addClass('div_1').siblings().removeClass('div_1');
+        }
+        )
     </script>
 </body>
 
