@@ -10,6 +10,7 @@
         * {
             margin: 0;
             padding: 0;
+            touch-action: none;
         }
         body{
             background: #000;
@@ -42,12 +43,34 @@
 <body>
     <div id="div_0"></div>
     <div id="div_1"></div>
-    <script src="touch.js"></script>
     <script src="zepto.js"></script>
+    <script src="touch.js"></script>
     <script>
         for(var i=0;i<24;i++){
             $('<img src="img/thumbs/'+(i+1)+'.jpg"/>').appendTo('#div_0');
         }
+        var nowIndex = 0;
+        $('#div_0 img').on('click',function(){
+            $('#div_1').show();
+            $('#div_1').css("background-image","url(img/"+ ($(this).index()+1) +".jpg)")
+            nowIndex = $(this).index();
+        })
+        $('#div_1').on('click',function(){
+            $(this).hide();
+        }).on('swipeLeft',function(){
+            nowIndex++;
+            if(nowIndex == $('#div_0 img').size()){
+                nowIndex = 0;
+            }
+            $('#div_1').css("background-image","url(img/"+ (nowIndex+1) +".jpg)")
+        }).on('swipeRight',function(){
+            nowIndex--;
+            if(nowIndex == -1){
+                nowIndex = $('#div_0 img').length-1;
+            }
+            $('#div_1').css("background-image","url(img/"+ (nowIndex+1) +".jpg)")
+        })
+
     </script>
 </body>
 
