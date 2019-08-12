@@ -51,27 +51,27 @@
         <hr>
         <div>
             <label for="proName">名称</label>
-            <input type="text" id="proName" placeholder="请输入产品名">
+            <input type="text" id="proName" placeholder="请输入产品名" v-model="name">
             <label for="proPrice">价格</label>
-            <input type="text" id="proPrice" placeholder="请输入产品价格">
-            <button class="add">添加</button>
+            <input type="text" id="proPrice" placeholder="请输入产品价格" v-model="price">
+            <button class="add" @click="add()">添加</button>
         </div>
         <div>
-            <input type="text" class="search-val" placeholder="请输入搜索内容">
-            <button class="search">搜索</button>
+            <input type="text" placeholder="请输入搜索内容" v-model="searchValue">
+            <button @click="search">搜索</button>
         </div>
         <ul>
-            <li v-for="(product,index) in proList" @click="change(product,index)" :class="{selected:product.isSelect}">
-                <input type="checkbox" :value="index">
+            <li v-for="(product,index) in proList" @click="change(product)" :class="{selected:product.isSelect}" v-show="product.isShow">
+                <input type="checkbox" v-model="product.isChecked">
                 <span>{{product.name}}</span>
-                <span class="close">[X]</span>
+                <span class="close" @click.stop="del(index)">[X]</span>
                 <span class="price">{{product.price}}</span>
             </li>
         </ul>
         <div>
-            <button class="del">删除选中</button>
+            <button @click="delAll">删除选中</button>
             总价
-            <!-- <span class="total_price">{{sum()}}</span> -->
+            <span>{{total()}}</span>
         </div>
     </div>
     <script src="vue.js"></script>
@@ -83,39 +83,71 @@
                     {
                         name: '裤子',
                         price: 11,
-                        isSelect:false
+                        isSelect: false,
+                        isShow: true
                     },
                     {
                         name: '衣服',
                         price: 22,
-                        isSelect:false
+                        isSelect: false,
+                        isShow: true
                     },
                     {
                         name: '电脑',
                         price: 3333,
-                        isSelect:false
+                        isSelect: false,
+                        isShow: true
                     },
                     {
                         name: 'iphoneX',
                         price: 6666,
-                        isSelect:false
+                        isSelect: false,
+                        isShow: true
                     }
                 ],
                 name: '',
-                price: ''
+                price: '',
+                searchValue: ''
             },
-            method:{
-                change(product,idx){
-                    if(product.isSelect){
-                        this.checke.splice(this.checke.indexOf(idx),1);
+            methods: {
+                add() {
+                    if (this.name && this.price) {
+                        this.proList.push({ name: this.name, price: this.price * 1, isSelect: false, isShow: true })
+                        this.name = "";
+                        this.price = "";
                     }
-                    else{
-                        this.checke.push(idx);
-                    }
-                    product.isSelect=!product.isSelect;
                 },
-                add(){
-                    console.log(this.name,this.price);
+                change(product) {
+                    console.log(this);
+                    product.isSelect = !product.isSelect;
+                },
+                del(index){
+                    console.log(this);
+                    this.proList.splice(index,1);
+                },
+                total(){
+                    let sum = 0;
+                    this.proList.forEach(function(obj){
+                        if(obj.isSelect){
+                            sum += obj.price;
+                        }
+                    })
+                    return sum;
+                },
+                delAll(){
+                    let arr = this.proList.filter(function(obj){
+                        return !obj.isSelect;
+                    })
+                    this.proList = [...arr];
+                },
+                search(){
+                    this.proList.forEach((obj) => {
+                        if(obj.name.includes(this.searchValue)){
+                            obj.isShow = true;
+                        }else{
+                            obj.isShow = false;
+                        }
+                    })
                 }
             }
 
