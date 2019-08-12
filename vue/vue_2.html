@@ -51,27 +51,27 @@
         <hr>
         <div>
             <label for="proName">名称</label>
-            <input type="text" id="proName" placeholder="请输入产品名" v-model="name">
+            <input type="text" id="proName" placeholder="请输入产品名">
             <label for="proPrice">价格</label>
-            <input type="text" id="proPrice" placeholder="请输入产品价格" v-model="price">
-            <button class="add" @click="add()">添加</button>
+            <input type="text" id="proPrice" placeholder="请输入产品价格">
+            <button class="add">添加</button>
         </div>
         <div>
-            <input type="text" class="search-val" v-model="searchVal" placeholder="请输入搜索内容">
-            <button class="search" @click="search()">搜索</button>
+            <input type="text" class="search-val" placeholder="请输入搜索内容">
+            <button class="search">搜索</button>
         </div>
         <ul>
             <li v-for="(product,index) in proList" @click="change(product,index)" :class="{selected:product.isSelect}">
-                <input type="checkbox" v-model="checke" :value="index">
+                <input type="checkbox" :value="index">
                 <span>{{product.name}}</span>
                 <span class="close">[X]</span>
                 <span class="price">{{product.price}}</span>
             </li>
         </ul>
         <div>
-            <button class="del" @click="del()">删除选中</button>
+            <button class="del">删除选中</button>
             总价
-            <span class="total_price">{{sum()}}</span>
+            <!-- <span class="total_price">{{sum()}}</span> -->
         </div>
     </div>
     <script src="vue.js"></script>
@@ -83,73 +83,42 @@
                     {
                         name: '裤子',
                         price: 11,
-                        isSelect: false
+                        isSelect:false
                     },
                     {
                         name: '衣服',
                         price: 22,
-                        isSelect: false
+                        isSelect:false
                     },
                     {
                         name: '电脑',
                         price: 3333,
-                        isSelect: false
+                        isSelect:false
                     },
                     {
                         name: 'iphoneX',
                         price: 6666,
-                        isSelect: false
+                        isSelect:false
                     }
                 ],
                 name: '',
-                price: '',
-                checke: [],
-                searchVal: ''
+                price: ''
             },
-            methods: {
-                change(product, idx) {
-                    if (product.isSelect) {
-                        this.checke.splice(this.checke.indexOf(idx), 1);
-                    } else {
+            method:{
+                change(product,idx){
+                    if(product.isSelect){
+                        this.checke.splice(this.checke.indexOf(idx),1);
+                    }
+                    else{
                         this.checke.push(idx);
                     }
-                    product.isSelect = !product.isSelect;
+                    product.isSelect=!product.isSelect;
                 },
-                add() {
-                    this.proList.push({
-                        name: this.name,
-                        price: this.price,
-                        isSelect: false
-                    });
-
-                    this.name = '';
-                    this.price = '';
-                },
-                sum() {
-                    var totalPrice = 0;
-                    this.proList.forEach(function (pro, idx) {
-                        if (pro.isSelect) {
-                            totalPrice += pro.price * 1;
-                        }
-                    });
-                    return totalPrice;
-                },
-                del() {
-                    let newPro = this.proList.filter(function (product) {
-                        return (product.isSelect != true);
-                    });
-                    this.proList = newPro;
-                    this.checke = [];
-                },
-                search() {
-                    let newPro = this.proList.filter((product) => {
-
-                        return product.name.includes(this.searchVal);
-                    });
-                    this.proList = newPro;
+                add(){
+                    console.log(this.name,this.price);
                 }
             }
-            
+
         });
 
 
