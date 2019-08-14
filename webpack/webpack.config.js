@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     entry:{
         //当前路径
@@ -10,6 +11,17 @@ module.exports = {
         path:path.resolve(__dirname,'dist'),
         filename:'[name].js'
     },
+    module:{
+        rules:[
+            {
+                test:/\.css$/,
+                use:ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: "css-loader"
+                })
+            }
+        ]
+    },
     plugins:[
         new HtmlWebpackPlugin({
             minify:{
@@ -17,7 +29,8 @@ module.exports = {
             },
             hash:true,
             template:'./src/index.html'
-        })
+        }),
+        new ExtractTextPlugin("styles.css"),
     ],
     devServer:{
         contentBase:path.resolve(__dirname,'dist'), //根目录
