@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #one_0 {
+            width: 300px;
+            height: 400px;
+            float: left;
+            margin: 0 0 0 10px;
+            border: #000 1px solid;
+        }
+
+        #one_1 {
+            width: 300px;
+            height: 30px;
+            float: left;
+            overflow: hidden;
+            border-bottom: #000 1px solid;
+        }
+
+        #one_1 li {
+            width: 50px;
+            height: 30px;
+            float: left;
+            background: #999999;
+            border: #000 1px solid;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        #one_2{
+            width: 300px;
+            height: 30px;
+            float: left;
+            border-bottom: #000 1px solid;
+        }
+
+        #error{
+            width: 20px;
+            height: 20px;
+            float: right;
+            font-size: 18px;
+            font-family: 600;
+            text-align: center;
+            line-height: 20px;
+            background: #999999;
+            border: #000 1px solid;
+            margin: 5px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="one_0">
+        <ul id="one_1">
+            <li>登陆</li>
+            <li>注册</li>
+        </ul>
+        <div id="one_2">
+            <button id="error">X</button>
+        </div>
+        <ul id="one_3">
+            <li>用户名：<input type="text" placeholder="请输入用户名"></li>
+            <li>密码：<input type="text" placeholder="请输入密码"></li>
+        </ul>
+        <div>
+            <button>登陆</button>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .aa {
+            background: orangered;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,15 +20,24 @@
 
     </div>
     <div id="id_1">
+        <my-component></my-component>
         <mycon></mycon>
 
     </div>
-
+    <template id="temp">
+        <div>
+            <h2>hahah</h2>
+            <div>fsdsf</div>
+            <h2 class="aa">{{title}}</h2>
+            <p>{{count}}</p>
+            <button @click="add()">click</button>
+        </div>
+    </template>
     <script src="vue.js"></script>
 
     <script>
         Vue.component("myComponent", {
-            template: "<h2>hahah</h2>"
+            template: "<div>jdfj</div>"
         })
         new Vue({
             el: "#id_0",
@@ -33,12 +47,23 @@
         })
         new Vue({
             el: "#id_1",
-            data:{
+            data: {
 
             },
-            components:{
-                "mycon":{
-                    template:"<div>jdfj</div>"
+            components: {
+                "mycon": {
+                    template: "#temp",
+                    props: ['title'],
+                    data() {
+                        return {
+                            count: 0
+                        }
+                    },
+                    methods: {
+                        add() {
+                            this.count++;
+                        }
+                    }
                 }
             }
         })
