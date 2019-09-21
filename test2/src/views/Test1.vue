@@ -1,9 +1,6 @@
 <template>
     <div>
-        <div>
-            <img src="./../assets/logo.png" alt="">
-            <span>首页 </span>
-        </div>
+        <h2>子路由1</h2>
     </div>
 </template>
 
@@ -15,5 +12,4 @@
 
 <style lang="scss" scoped>
 
-    
 </style>

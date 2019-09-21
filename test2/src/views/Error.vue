@@ -1,9 +1,6 @@
 <template>
     <div>
-        <div>
-            <img src="./../assets/logo.png" alt="">
-            <span>首页 </span>
-        </div>
+        <h2>哎哟~ 页面走丢了。。。</h2>
     </div>
 </template>
 
@@ -15,5 +12,4 @@
 
 <style lang="scss" scoped>
 
-    
 </style>

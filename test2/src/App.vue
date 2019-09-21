@@ -1,33 +1,53 @@
+<!-- 总组件 -->
 <template>
   <div id="app">
-      <common-header></common-header>
-      <div class="container">
-          fyghjkl;'lhaha
-        header'
-        <h2>hehe</h2>
-      </div>
-      <common-footer></common-footer>
+    <!-- <common-header></common-header> -->
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>|
+      <!-- <router-link to="/mine">我的 </router-link>| -->
+      <!-- params传参 不能使用path直接传 需要使用name -->
+      <router-link :to="{name:'mine',params:{id:666,name:'小王'}}">我的params </router-link>|
+      <!-- query传参 -->
+      <router-link :to="{path:'/mine',query:{id:666,name:'小王'}}">我的query </router-link>|
+      <!-- 通过路径传参 -->
+      <router-link to="/test/5/lisi">test</router-link> |
+      <router-link to="/aaa">跳转aaa</router-link> |
+      <router-link to="/c">跳转c </router-link>
+    </div>
+    <transition name="fade">
+       <router-view/>
+    </transition>
   </div>
 </template>
+
 <script>
-  //  1 导入  
-  //  2 components中声明 
-  //  3template中 使用
+    // 1 引入  2components下声明
     import CommonHeader from './components/CommonHeader';
-    // import HelloWorld from './components/HelloWorld';
-    import CommonFooter from './components/CommonFooter';
     export default {
         components:{
-            CommonHeader,
-            CommonFooter
-            // HelloWorld
+            CommonHeader
         }
     }
 </script>
 
-<style lang="scss" >
-  .container{
-    height: 300px;
-    background: red;
+<style lang="scss">
+  .fade-enter{
+    opacity: 0;
+  }
+  .fade-enter-active{
+    transition:opacity 2s ease;
+  }
+  .fade-enter-to{
+    opacity: 1;
+  }
+  .fade-leave{
+    transform: translateX(0);
+  }
+  .fade-leave-active{
+    transition: transform 1s ease;
+  }
+  .fade-leave-to{
+    transform: translateX(100%);
   }
 </style>

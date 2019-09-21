@@ -1,6 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
+import Mine from './views/Mine';
+import Test from './views/Test';
+import Test1 from './views/Test1';
+import Test2 from './views/Test2';
+import Error from './views/Error'
 
 Vue.use(Router);
 
@@ -12,6 +17,7 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
+      alias:'/c'
     },
     {
       path: '/about',
@@ -21,5 +27,34 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
+    {
+      path:'/mine',
+      name:'mine',
+      component:Mine,
+      children:[
+          {
+            path:'test1',
+            name:'test1',
+            component:Test1
+          },
+          {
+            path:'test2',
+            name:'test2',
+            component:Test2
+          }
+      ]
+    },{
+      path:'/test/:id/:name',
+      name:'test',
+      component:Test
+    },{
+      path:'/aaa',
+      redirect:'/'
+    }
+    ,{
+      path:'*',
+      name:'error',
+      component:Error
+    }
   ],
 });

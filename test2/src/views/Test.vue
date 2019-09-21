@@ -1,19 +1,18 @@
 <template>
     <div>
-        <div>
-            <img src="./../assets/logo.png" alt="">
-            <span>首页 </span>
-        </div>
+        {{$route.params.id}}
+        {{$route.params.name}}
+        <h1>test test</h1>
     </div>
 </template>
 
 <script>
     export default {
         
+
     }
 </script>
 
 <style lang="scss" scoped>
 
-    
 </style>
