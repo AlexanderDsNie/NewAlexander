@@ -1,6 +1,6 @@
 <template>
     <div class="header" :style="{background:$store.state.color}" >
-        <span class="one_1">首页</span>{{$store.state.title}}
+        <span class="sho">首页</span>{{$store.state.title}}
     </div>
 </template>
 
@@ -21,7 +21,7 @@
         width:100%;
         color: white;
     }
-    .one_1{
+    .sho{
         position:fixed;
         top: 0;
         left: 10px;

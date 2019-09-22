@@ -45,8 +45,8 @@
 </script>
 <style lang="scss" scoped>
     #footer{
-        height:2rem;
-        line-height: 2rem;
+        height:1rem;
+        line-height: 1rem;
         background: #f00;
         position: fixed;
         bottom: 0px;

@@ -4,6 +4,7 @@ import router from './router';
 import store from './store';
 
 import '@/assets/css/common.scss';
+import '@/assets/js/rem.js';
 Vue.config.productionTip = false;
 
 new Vue({
