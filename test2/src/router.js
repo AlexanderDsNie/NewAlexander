@@ -9,7 +9,7 @@ import Error from './views/Error'
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -17,15 +17,18 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
-      alias:'/c'
+      alias:'/c',
+      beforeEnter: (to, from, next) => {
+        console.log('首页',to);
+        console.log('首页',from);
+        console.log('首页',next);
+        next();
+      }
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      component: () => import('./views/About.vue'),
     },
     {
       path:'/mine',
@@ -58,3 +61,5 @@ export default new Router({
     }
   ],
 });
+
+export default router;
