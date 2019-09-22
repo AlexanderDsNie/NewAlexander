@@ -1,9 +1,9 @@
 <template>
-    <div id="footer">
-        <router-link to="/">电影</router-link>
-        <router-link to="/music">音乐</router-link>
-        <router-link to="/book">图书</router-link>
-        <router-link to="/photo">图片</router-link>
+    <div id="footer" :style="{background:$store.state.color}">
+        <router-link @click.native="$store.commit('change',{title:'电影',color:'red'})" to="/">电影</router-link>
+        <router-link @click.native="$store.commit('change',{title:'音乐',color:'green'})" to="/music">音乐</router-link>
+        <router-link @click.native="$store.commit('change',{title:'图书',color:'orange'})" to="/book">图书</router-link>
+        <router-link @click.native="$store.commit('change',{title:'图片',color:'yellow'})" to="/photo">图片</router-link>
     </div>
 </template>
 
@@ -12,11 +12,10 @@
         
     }
 </script>
-
 <style lang="scss" scoped>
     #footer{
-        height:1rem;
-        line-height: 1rem;
+        height:2rem;
+        line-height: 2rem;
         background: #f00;
         position: fixed;
         bottom: 0px;
