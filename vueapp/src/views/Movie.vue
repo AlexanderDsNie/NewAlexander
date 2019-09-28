@@ -6,8 +6,8 @@
                 <div>
                     <h2>{{obj.original_title}}</h2>
                     <p>{{obj.collect_count}}已收藏</p>
-                    <p>演员：<span v-for="(actor,index) in obj.casts" :key="index">{{actor.name}} </span></p>
-                    <p>上映时间：{{obj.mainland_pubdate}}</p>
+                    <p>演员：<span v-for="(cast,index) in obj.casts" :key="index">{{cast.name}}</span></p>
+                    <p>上映时间：{{obj.year}}</p>
                 </div>
             </li>
         </ul>
@@ -23,13 +23,19 @@
             }
         },
         created(){
-            axios.get('https://bird.ioliu.cn/v1?url=https://douban.uieee.com/v2/movie/in_theaters?start=0&count=10')
+            axios.get('./data/movie0.json')
             .then((res)=>{
-                console.log(res.data);
-                this.movieList = res.data.subjects;
-            }).catch((res)=>{
-                console.log(res);
+                this.movieList= res.data.subjects;
+            }).catch((err)=>{
+                console.log(err);
             })
+            // axios.get('https://bird.ioliu.cn/v1?url=https://douban.uieee.com/v2/movie/in_theaters?start=0&count=10')
+            // .then((res)=>{
+            //     console.log(res.data);
+            //     this.movieList = res.data.subjects;
+            // }).catch((res)=>{
+            //     console.log(res);
+            // })
         }
     }
 </script>
