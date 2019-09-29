@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+    <meta charset="UTF-8">
     <title>J2EEshiyan1</title>
 </head>
 
@@ -9,37 +10,74 @@
     <table align="center" border="1">
         <tr>
             <td align="right">登录名称：</td>
-            <td><input type="text"></td>
+            <td><input type="text" name="name1" id="name1"></td>
         </tr>
         <tr>
             <td align="right">登录密码：</td>
-            <td><input type="password"></td>
+            <td><input type="password" id="password" name="password"></td>
         </tr>
         <tr>
             <td align="right">密码确认：</td>
-            <td><input type="password"></td>
+            <td><input type="password" id="confirm" name="confirm"></td>
         </tr>
         <tr>
             <td align="right">密码保护问题：</td>
-            <td><select name="" id="">
+            <td><select name="question" id="">
                     <option value="">你的宠物叫什么名字？</option>
                 </select>
             </td>
         </tr>
         <tr>
             <td align="right">问题答案：</td>
-            <td><input type="text"></td>
+            <td><input type="text" name="answer" id="answer"></td>
         </tr>
         <tr>
             <td align="right">性别：</td>
-            <td><input type="radio" name="sex">男
-                <input type="radio" name="sex">女</td>
+            <td><input type="radio" name="sex" value="male">男
+                <input type="radio" name="sex" value="female">女</td>
         </tr>
         <tr>
-            <td colspan="2" align="center"><input type="submit" value="提交"><input type="reset" value="重填"></td>
+            <td colspan="2" align="center"><input type="submit" onclick="return check();" value="注册"><input type="reset" value="重填"></td>
         </tr>    
     </table>
     <hr>
-</body>
 
+
+<script>
+    function check(){
+    var btn1=document.getElementById("name1");
+    var password=document.getElementById("password");
+    var confirm=document.getElementById("confirm");
+    var answer=document.getElementById("answer");
+    if(btn1.value==""||btn1.value.length<6){
+    alert("登录名称为空，或长度不足！");
+         btn1.select();
+         btn1.focus();
+         return false;
+    }
+    if(password.value==""||password.value.length<6){
+    alert("密码为空，或长度不足！");
+         password.select();
+         password.focus();
+         return false;
+    }
+    if(confirm.value==""){    
+         alert("密码确认不能为空！");
+         document.myform.confirm.focus();
+         return false;
+    }
+    if(password.value!=confirm.value){
+         alert("两次输入的密码不相同！");
+         document.myform.password.focus();
+         return false;
+       }
+    if(answer.value==""){
+         alert("答案不能为空");
+         document.myform.answer.focus();
+         return false;
+       }
+       return true;
+    }
+</script>
+</body>
 </html>

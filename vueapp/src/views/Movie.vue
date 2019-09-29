@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul class="movie-box">
-            <li class="movieList" v-for="(obj,index) in movieList" :key="index">
+            <li class="movieList" v-for="(obj,index) in movieList" :key="index" @click="goDetail(obj.id)">
                 <img :src="obj.images.medium" alt="">
                 <div>
                     <h2>{{obj.original_title}}</h2>
@@ -11,10 +11,9 @@
                 </div>
             </li>
         </ul>
-        <img class="loading" v-show="isShow" src="@/assets/images/loading1.gif" alt="">
+        <img class="loading" v-show="isShow" src="@/assets/images/loading3.gif" alt="">
     </div>
 </template>
-
 
 <script>
     import axios from 'axios';
@@ -53,6 +52,13 @@
                     })
                 }
                
+            },
+            goDetail(id){
+                // query
+                this.$router.push({
+                    path:'/movie/moviedetail',
+                    query:{id}
+                });
             }
         }
     }
@@ -70,8 +76,8 @@
             // }).catch((res)=>{
             //     console.log(res);
             // })
-
 </script>
+
 <style lang="scss" scoped>
 .movie-box{
     padding: 0.2rem;
@@ -87,7 +93,6 @@
 }
 .loading{
     width:1.5rem;
-    // height:3rem;
     position: fixed;
     left:50%;
     top:50%;
