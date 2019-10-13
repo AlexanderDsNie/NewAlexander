@@ -3,11 +3,11 @@
     <meta charset="UTF-8">
     <title>J2EEshiyan1</title>
 </head>
-
 <body>
     <h1 align="center">HTML基础—注册表单</h1>
     <hr>
     <table align="center" border="1">
+        <form name="myform" action="myaction.jsp" method=post>
         <tr>
             <td align="right">登录名称：</td>
             <td><input type="text" name="name1" id="name1"></td>
@@ -38,7 +38,8 @@
         </tr>
         <tr>
             <td colspan="2" align="center"><input type="submit" onclick="return check();" value="注册"><input type="reset" value="重填"></td>
-        </tr>    
+        </tr>  
+        <form>  
     </table>
     <hr>
 
@@ -51,8 +52,8 @@
     var answer=document.getElementById("answer");
     if(btn1.value==""||btn1.value.length<6){
     alert("登录名称为空，或长度不足！");
-         btn1.select();
-         btn1.focus();
+         name1.select();
+         name1.focus();
          return false;
     }
     if(password.value==""||password.value.length<6){
