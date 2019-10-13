@@ -1,12 +1,8 @@
 <template>
     <div>
-        <ul class="music-box">
-            <li class="musicList"  v-for="(obj,index) in musicList" :key="index">
-                <div>
-                    <h2>{{obj.original_title}}</h2>
-                    <p>作者：<span v-for="(author,index) in obj.authors" :key="index">{{author.name}}</span></p>
-                    <p>上映时间：{{obj.year}}</p>
-                </div>
+        <ul class="musicList">
+            <li v-for="(obj,index) in musicList" :key="index">
+                <img :src="obj.bg" alt="">
             </li>
         </ul>
     </div>
@@ -21,20 +17,29 @@
             }
         },
         creat(){
-            axios.get('./data/musicdata.json')
+            axios.get('./data/musiclist.json')
             .then((res)=>{
-                this.musicList= res.data.subjects;
+                this.musicList = res.data.albums;
             }).catch((err)=>{
-                console.log(err);
+                alert('服务器错误');
             })
         }     
     }
 </script>
 
 <style lang="scss" scoped>
-.music-box{
-    padding: 0.2rem;
     .musicList{
+        display: flex;
+        flex-wrap:wrap;
+        li{
+            // flex:1;
+            width:50%;
+            img{
+                width:100%;
+                display: block;
+            }
+        }
+
+
     }
-}
 </style>
