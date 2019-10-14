@@ -4,6 +4,7 @@
             <li v-for="(obj,index) in musicList" :key="index">
                 <img :src="obj.bg" alt="">
             </li>
+
         </ul>
     </div>
 </template>
@@ -16,7 +17,7 @@
                 musicList:[]
             }
         },
-        creat(){
+        created(){
             axios.get('./data/musiclist.json')
             .then((res)=>{
                 this.musicList = res.data.albums;
