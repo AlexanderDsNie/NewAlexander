@@ -1,0 +1,233 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: rgb(241, 204, 135);
+        }
+
+        .body_1 {
+            width: 1200px;
+            height: 800px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        .body_1_1 {
+            width: 1200px;
+            height: 60px;
+            float: left;
+            background: rgb(37, 152, 180);
+            font-size: 32px;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .body_1_1 img {
+            width: 30px;
+            height: 30px;
+            padding: 10px 10px 0 0;
+        }
+
+        .body_1_2 {
+            width: 1200px;
+            height: 540px;
+            float: left;
+        }
+
+        .title_0 {
+            width: 1200px;
+            float: left;
+            font-size: 36px;
+            margin: 30px 0 0 100px;
+
+        }
+
+        .body_1_3 {
+            width: 1200px;
+            height: 100px;
+            float: left;
+        }
+
+        .body_1_3 a {
+            font-size: 18px;
+            margin: 0 0 0 100px;
+        }
+
+        .body_1_3 a:hover {
+            color: red;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+<div class="body_1">
+    <div class="body_1_1"><img src="images/004.jpg" alt="">图书馆信息管理系统</div>
+    <div class="body_1_2">
+        <div class="title_0">&nbsp</div><br><br>
+        <center>
+            <%
+    request.setCharacterEncoding("UTF-8");
+    mysql m=new mysql();
+    mysql mm=new mysql();
+    test t=new test();
+    String[] ids = request.getParameterValues("checkbox1");
+    String[] idn=request.getParameterValues("checkbox2");
+    String[] idp=request.getParameterValues("checkbox3");
+
+    String r_id=(String)session.getAttribute("reader_id");
+    String b_id="";
+    String r_name=(String)session.getAttribute("reader_name");
+
+    String borrow_level=(String)session.getAttribute("borrow_level");
+    System.out.println("borrow_level is"+" "+borrow_level);
+
+    String select_method=(String)session.getAttribute("part_a");
+
+    String b_symbol="incomplete";
+
+    String bb_name=(String)session.getAttribute("bb_name");
+    String bb_publish=(String)session.getAttribute("bb_publish");
+    String bb_author=(String)session.getAttribute("bb_author");
+
+    String year=Integer.toString(t.year());
+    String month=Integer.toString(t.month());
+    String day=Integer.toString(t.day());
+    String borrow_date=year+"-"+month+"-"+day;
+    String return_date=year+"-"+month+"-"+day;
+    // m.Search_book();
+    boolean T=true;
+    if(bb_name=="true"){
+        if(idn==null){
+            out.println("请选择要借阅的图书!");
+        }
+        else{
+            m.Search_book();
+            mm.Search_book();
+            m.rs2=m.stm.executeQuery("select * from book where book_name like '%"+select_method+"%'");
+            int ans=0;
+            while(m.rs2.next()){
+                ans++;
+                for(int i=0;i<idn.length;i++){
+                    int a=Integer.parseInt(idn[i]);
+                    if(a==ans){
+                        if(m.rs2.getString(9)=="0"){
+                            out.println(m.rs2.getString(3)+" 库存不足，借阅失败"+"<br>");
+                            continue;
+                        }
+                        else {
+                            b_id = m.rs2.getString(2);
+                            try {
+                                mm.stm.executeUpdate("insert into borrow_record(r_id, r_name, b_id, borrow_bdate, return_bdate, b_symbol, b_level) values('" + r_id + "','" + r_name + "','" + b_id + "','" + borrow_date + "','" + return_date + "','" + b_symbol + "','" + borrow_level + "')");
+                            } catch (Exception e) {
+                                out.println("您已借阅"+m.rs2.getString(3)+"未归还，无法再次借阅");
+                                T = false;
+                            }
+                            if (T) {
+                                out.println(m.rs2.getString(3) + "借阅成功" + "<br>");
+                            }
+                            T = true;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    if(bb_publish=="true") {
+        if(idp==null){
+            out.println("请选择要借阅的图书");
+        }
+        else{
+            m.Search_book();
+            mm.Search_book();
+            m.rs2 = m.stm.executeQuery("select * from book where publishing_house like '%" + select_method + "%'");
+            int ans = 0;
+            while (m.rs2.next()) {
+                ans++;
+                for (int i = 0; i < idp.length; i++) {
+                    int a = Integer.parseInt(idp[i]);
+                    if (a == ans) {
+                        if (m.rs2.getString(9) == "0") {
+                            out.println(m.rs2.getString(3) + " 库存不足，借阅失败" + "<br>");
+                            continue;
+                        } else {
+                            b_id = m.rs2.getString(2);
+                            try {
+                                mm.stm.executeUpdate("insert into borrow_record(r_id, r_name, b_id, borrow_bdate, return_bdate, b_symbol, b_level) values('" + r_id + "','" + r_name + "','" + b_id + "','" + borrow_date + "','" + return_date + "','" + b_symbol + "','" + borrow_level + "')");
+                            } catch (Exception e) {
+                                out.println("您已借阅" + m.rs2.getString(3) + "未归还，无法再次借阅");
+                                T = false;
+                            }
+                            if (T) {
+                                out.println(m.rs2.getString(3) + "借阅成功" + "<br>");
+                            }
+                            T = true;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+    if(bb_author=="true"){
+        if(ids==null){
+            out.println("请选择要借阅的图书");
+        }
+        else{
+            m.Search_book();
+            mm.Search_book();
+            m.rs2=m.stm.executeQuery("select * from book where book_author like '%"+select_method+"%'");
+            int ans=0;
+            while(m.rs2.next()){
+                ans++;
+                for(int i=0;i<ids.length;i++){
+                    int a=Integer.parseInt(ids[i]);
+                    if(a==ans){
+                        if(m.rs2.getString(9)=="0"){
+                            out.println(m.rs2.getString(3)+" 库存不足，借阅失败"+"<br>");
+                            continue;
+                        }
+                        else {
+                            b_id = m.rs2.getString(2);
+                            try {
+                                mm.stm.executeUpdate("insert into borrow_record(r_id, r_name, b_id, borrow_bdate, return_bdate, b_symbol, b_level) values('" + r_id + "','" + r_name + "','" + b_id + "','" + borrow_date + "','" + return_date + "','" + b_symbol + "','" + borrow_level + "')");
+                            } catch (Exception e) {
+                                out.println("您已借阅"+m.rs2.getString(3)+"未归还，无法再次借阅");
+                                T = false;
+                            }
+                            if (T) {
+                                out.println(m.rs2.getString(3) + "借阅成功" + "<br>");
+                            }
+                            T = true;
+                        }
+                    }
+                }
+            }
+        }
+    }
+%>
+        </center>
+    </div>
+    <div class="body_1_3">
+        <a href="choose_function_reader.jsp">返回</a>
+        <hr>
+        <%
+            out.println("系统时间:  "+new Date());
+        %>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: rgb(241, 204, 135);
+        }
+
+        .body_1 {
+            width: 1200px;
+            height: 800px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        .body_1_1 {
+            width: 1200px;
+            height: 60px;
+            float: left;
+            background: rgb(37, 152, 180);
+            font-size: 32px;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .body_1_1 img {
+            width: 30px;
+            height: 30px;
+            padding: 10px 10px 0 0;
+        }
+
+        .body_1_2 {
+            width: 1200px;
+            height: 540px;
+            float: left;
+        }
+
+        .title_0 {
+            width: 1200px;
+            float: left;
+            font-size: 36px;
+            margin: 30px 0 0 100px;
+
+        }
+
+        .title_1 {
+            width: 300px;
+            float: left;
+            margin: 30px 0 0 200px;
+
+        }
+
+        .button_1 {
+            width: 160px;
+            height: 40px;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            margin: 30px 0 0 50px;
+            background: rgb(177, 196, 214);
+        }
+
+        .button_1 a {
+            color: rgb(27, 57, 124);
+            font-size: 18px;
+            font-weight: 300px;
+            text-decoration: none;
+        }
+
+        .body_1_3 {
+            width: 1200px;
+            height: 100px;
+            float: left;
+        }
+
+        .body_1_3 a {
+            font-size: 18px;
+        }
+
+        .body_1_3 a:hover {
+            color: red;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+<div class="body_1">
+    <div class="body_1_1"><img src="images/004.jpg" alt="">图书馆信息管理系统</div>
+    <div class="body_1_2">
+        <div class="title_0">查询图书信息：</div>
+        <div class="title_1">
+            <div class="button_1"><a href="reader_search_bookname.jsp">通过书名查询</a></div>
+            <div class="button_1"><a href="reader_search_bookpublish.jsp">通过出版社查询</a></div>
+            <div class="button_1"><a href="reader_search_bookauthor.jsp">通过作者查询</a></div>
+            <div class="button_1"><a href="choose_function_reader.jsp">返回主页</a></div>
+        </div>
+    </div>
+    <div class="body_1_3">
+        <hr>
+        <%
+            out.println("系统时间:  "+new Date());
+        %></div>
+</div>
+</body>
+
+</html>

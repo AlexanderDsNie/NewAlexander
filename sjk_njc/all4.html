@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: rgb(241, 204, 135);
+        }
+
+        .body_1 {
+            width: 1200px;
+            height: 800px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        .body_1_1 {
+            width: 1200px;
+            height: 60px;
+            float: left;
+            background: rgb(37, 152, 180);
+            font-size: 32px;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .body_1_1 img {
+            width: 30px;
+            height: 30px;
+            padding: 10px 10px 0 0;
+        }
+
+        .body_1_2 {
+            width: 1200px;
+            height: 540px;
+            float: left;
+        }
+
+        .title_0 {
+            width: 1200px;
+            float: left;
+            font-size: 36px;
+            margin: 30px 0 0 100px;
+
+        }
+
+        .body_1_3 {
+            width: 1200px;
+            height: 100px;
+            float: left;
+        }
+
+        .body_1_3 a {
+            font-size: 18px;
+            margin: 0 0 0 100px;
+        }
+
+        .body_1_3 a:hover {
+            color: red;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body_1">
+        <div class="body_1_1"><img src="images/004.jpg" alt="">图书馆信息管理系统</div>
+        <div class="body_1_2">
+            <div class="title_0">修改图书信息：</div><br><br>
+            <center>
+                <%
+                request.setCharacterEncoding("UTF-8");
+                String n1,n2,n3;
+                String reader,admin;
+                String n;
+                n1=(String)session.getAttribute("u_bookname");
+                n2=(String)session.getAttribute("u_publishhouse");
+                n3=(String)session.getAttribute("u_author");
+                String goal=(String)session.getAttribute("old_book_name");
+                String stack_id=request.getParameter("stack_id");
+                String book_name=request.getParameter("book_name");
+                String publish_house=request.getParameter("publish_house");
+                String publish_data=request.getParameter("publish_data");
+                String book_price=request.getParameter("book_price");
+                String in_date=request.getParameter("in_date");
+                String in_num=request.getParameter("in_num");
+                test t=new test();
+                String []divide1=publish_data.split("-");
+                String []divide2=in_date.split("-");
+                int year1=Integer.parseInt(divide1[0]);
+                int year2=Integer.parseInt(divide2[0]);
+                int day1=Integer.parseInt(divide1[2]);
+                int day2=Integer.parseInt(divide2[2]);
+                int month1=Integer.parseInt(divide1[1]);
+                int month2=Integer.parseInt(divide2[2]);
+                if(!t.judge_date_llegal(year1,month1,day1,year2,month2,day2)){
+                    out.println("出版日期或入库日期输入错误！");
+                }
+                else{
+                   mysql m=new mysql();
+                   m.Search_book();
+                //"update book set in_num='"+s_i_n+"'where book_name ='"+book_name+"'"
+                    try {
+                        m.stm.executeUpdate("update book set stack_id='" + stack_id + "'where book_name ='" + goal + "'");
+                    } catch (Exception e) {
+                        System.out.println("请输入正确的书库ID");
+                    }
+                    try {
+                        m.stm.executeUpdate("update book set publishing_house='" + publish_house + "'where book_name ='" + goal + "'");
+                    } catch (Exception e) {
+                        System.out.println("出版社信息错误");
+                    }
+                    try {
+                        m.stm.executeUpdate("update book set publish_date='" + publish_data + "'where book_name ='" + goal + "'");
+                    } catch (Exception e) {
+                        System.out.println("出版时间修改失败");
+                    }
+                    try {
+                        m.stm.executeUpdate("update book set book_price='" + book_price + "'where book_name ='" + goal + "'");
+                    } catch (Exception e) {
+                        System.out.println("图书价格修改失败");
+                    }
+                    try {
+                        m.stm.executeUpdate("update book set in_date='" + in_date + "'where book_name ='" + goal + "'");
+                    } catch (Exception e) {
+                        System.out.println("入库时间修改失败");
+                    }
+                    try {
+                        m.stm.executeUpdate("update book set in_num='" + in_num + "'where book_name ='" + goal + "'");
+                    } catch (Exception e) {
+                        System.out.println("入库数量修改失败");
+                    }
+                    try {
+                        m.stm.executeUpdate("update book set book_name='" + book_name + "'where book_name ='" + goal + "'");
+                    } catch (Exception e) {
+                        System.out.println("图书名称修改失败");
+                    }
+                    out.println("更新信息成功");
+                }
+            %>
+            </center>
+        </div>
+        <div class="body_1_3">
+            <a href="choose_function.jsp">返回</a>
+            <hr>
+            <%
+        out.println("系统时间:  "+new Date());
+        %>
+        </div>
+    </div>
+</body>
