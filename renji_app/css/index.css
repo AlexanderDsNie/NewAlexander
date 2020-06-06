@@ -26,6 +26,59 @@ li{
     height: 0.39rem;
     margin: 0.05rem 0 0 0.22rem;
 }
+.one_add{
+    width: 7.5rem;
+    height: 0.8rem;
+    float: left;
+    display: flex;
+}
+.one_1{
+    width: 7.5rem;
+    height: 0.8rem;
+    float: left;
+    list-style:none;
+    display: flex;
+}
+.one_1_1{
+    width: 1.5rem;
+    height: 0.6rem ;
+    float: left;
+    font-size: 0.33rem;
+    font-weight:400;
+    color: #888787c0;
+    font-family:PingFangSC-Regular;
+    text-align: center;
+    margin: 0.2rem 0 0 0.45rem ;
+}
+.one_1_2{
+    width: 2rem;
+    height: 0.6rem ;
+    float: left;
+    font-size: 0.33rem;
+    font-weight:400;
+    color: #888787c0;
+    font-family:PingFangSC-Regular;
+    text-align: center;
+    margin: 0.2rem 0 0 0.5rem ;
+}
+.one_1_2 span{
+    float: left;
+}
+#one_hot_1{
+    color: black;
+    font-size: 0.34rem ;
+    font-weight:500;
+}
+.one_hot_2{
+    width: 0.4rem;
+    height: 0.4rem;
+    float: left;
+}
+.one_xiala{
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: -0.23rem -0.2rem 0 0;
+}
 .two{
     width: 7.5rem;
     height: 3.9rem;
@@ -36,31 +89,50 @@ li{
 }
 .three{
     width: 7.1rem;
-    height: 1.6rem;
-    margin: 0 0.2rem 0 0.2rem;
+    height: 1.4rem;
+    margin: 0.9rem 0.2rem 0 0.2rem;
     background: #ffffff;
-    display: flex;
-}
-.three_0{
-    width: 1.42rem;
-    height: 1.6rem;
     float: left;
+    overflow: hidden;
 }
-.three .three_0 img {
-    width: 0.8rem;
-    height: 0.8rem;
-    margin: 0 0.31rem;
+.three img{
+    width: 0.4rem;
+    height: 0.4rem;
+    float: left;
+    margin: 0.4rem 0 0 0.33rem ;
 }
-.three .three_0 span{
-    width: 1.42rem;
-    height: 0.2rem;
-    font-size: 0.2rem;
-    font-family: PingFangSC-Regular;
+.three span{
+    float: left;
+    font-size: 0.26rem;
     font-weight: 400;
-    color: #333333;
+    margin: 0.42rem 0 0 0.2rem ;
+}
+.three_1{
+    width: 2.2rem;
+    height: 1.2rem;
     float: left;
-    text-align: center;
-    margin: -0.1rem 0;
+    background-color: #f5eabd;
+    margin: 0.1rem 0 0 0;
+    opacity: 0.75;
+    border-radius:10px;
+}
+.three_2{
+    width: 2.2rem;
+    height: 1.2rem;
+    float: left;
+    margin: 0.1rem 0 0 0.25rem;
+    opacity: 0.75;
+    border-radius:10px;
+    background-color: #f9e1e1;
+}
+.three_3{
+    width: 2.2rem;
+    height: 1.2rem;
+    float: left;
+    margin: 0.1rem 0 0 0.25rem;
+    opacity: 0.75;
+    border-radius:10px;
+    background-color: #fddec2;
 }
 .four{
     width: 7.5rem;
@@ -68,142 +140,13 @@ li{
     background: #ffffff;
     overflow: hidden;
 }
-.four img {
-    width: 7.1rem;
-    height: 1.4rem;
-    margin: 0.2rem
-}
 .five{
     width: 7.5rem;
     height: 15rem;
     background: #eeeeee;
     overflow: hidden;
 }
-.five_1{
-    width: 7.5rem;
-    height: 1rem;
-    background: #ffffff;
-    border: none;
-    margin: 0.1rem 0 0 0;
-}
-.five_1_1{
-    float: left;
-    margin: 0.25rem 0 0 0.2rem;
-} 
-#zuan,#love{
-    width: 0.5rem;
-    height: 0.5rem;
-    float: left;
-}    
-.five_1_2{
-    float: left;
-    width: 1.12rem;
-    height: 0.27rem;
-    font-size: 0.28rem;
-    font-family: PingFangSC-Regular;
-    font-weight: 400;
-    color: #333333;
-    margin: 0.2rem 0 0 0.2rem;
-} 
-.five_1_3{
-    float: left;
-    width: 1.9rem;
-    height: 0.18rem;
-    font-size: 0.18rem;
-    font-family: Helvetica;
-    font-weight: 400;
-    color: #999999;
-    margin: 0.61rem 0 0 -1.1rem;
-}
-.more{
-    float: right;
-    width: 0.14rem;
-    height: 0.24rem;
-    margin: 0.38rem 0.2rem 0 0;
-}
-.five_2{
-    width: 7.1rem;
-    height: 3.3rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background: #ffffff;
-    border: none;
-    padding: 0 0.2rem;
-}
-.five_2_0{
-    width: 7.5rem;
-    height: 3.3rem;
-    display: flex;
-}
-.five_2 img{
-    width: 2.3rem;
-    height: 2.3rem;
-}
-.five_3{
-    width: 7.5rem;
-    height: 1rem;
-    background: #ffffff;
-    margin: 0.1rem 0 0 0;
-}
-.five_font_1{
-    width: 2.24rem;
-    height: 0.24rem;
-    float: left;
-    font-size:0.24rem;
-    font-family:PingFangSC-Regular;
-    font-weight:400;
-    color: #333333;
-    margin: -0.1rem 0 0 0;
-}
-.five_red{
-    width:0.62rem;
-    height:0.19rem;
-    font-size:0.24rem;
-    font-family:PingFangSC-Regular;
-    font-weight:400;
-    color:#EF1C00;
-    margin: 0.1rem 0 0 0;
-}
-.five_red2{
-    margin: 0.3rem 0 0 0;
-}
-.five_4{
-    width: 7.1rem;
-    height: 9rem;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
-    background: #ffffff;
-    padding:0 0.2rem;
-}
-.five_4_0{
-    float: left;
-    width: 3.5rem;
-    height: 4.5rem;
-}
-.five .five_4 img{
-    width: 3.5rem;
-    height: 3.5rem;
-}
-.five_font_2{
-    width: 3.4rem;
-    height:0.24rem;
-    font-size:0.24rem;
-    font-family:PingFangSC-Regular;
-    font-weight:400;
-    margin: -0.1rem 0 0 0;
-}
-.sell{
-    float: right;
-    width: 0.66rem;
-    height: 0.2rem;
-    font-size:0.2rem;
-    font-family:PingFangSC-Regular;
-    font-weight:400;
-    color: #999999;
-    margin: -0.1rem 0 0 0;
-}
+
 .footer{
     position: fixed;
     left: 0px;
