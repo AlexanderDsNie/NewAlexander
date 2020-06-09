@@ -144,21 +144,22 @@ li{
 }
 .four{
     width: 7.5rem;
-    height: 18rem;
+    height: 29.7rem;
     background: #ffffff;
+    border-top:1px solid #b4b4b4;
     overflow: hidden;
 }
-#div_0{
+#four_0{
     display: flex;
     flex-wrap: wrap;
 }
-#div_0 img{
+#four_0 img{
     width: 25%;
     box-sizing: border-box;
-    border-right:1px solid #000;
-    border-bottom:1px solid #000;
+    border-right:1px solid #eee;
+    border-bottom:1px solid #eee;
 }
-#div_1{
+#four_1{
     position: fixed;
     top: 0;
     left: 0;
