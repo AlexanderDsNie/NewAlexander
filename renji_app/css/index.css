@@ -14,6 +14,7 @@ li{
     height: 0.48rem;
     background: #ffffff;
     display: flex;
+    border-bottom:1px solid #999999;
     padding: 0.2rem;
 }
 .search{
