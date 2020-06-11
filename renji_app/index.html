@@ -23,8 +23,26 @@
         </ul>
     </div>
     <div class="two">
-        <img src="images/body.jpg" alt="">
+        <div id="lun_1" style="display:block;"><img class="two_img" src="images/body.jpg" alt=""></div>
+        <div id="lun_2" style="display:block;"><img class="two_img" src="images/body1.jpg" alt=""></div>
+        <div id="lun_3" style="display:block;"><img class="two_img" src="images/body2.jpg" alt=""></div>
     </div>
+    <script type="text/javascript">
+        var NowImg=1;
+        var MaxImg=3;
+        setInterval(function(){
+            for(var i=1;i<=MaxImg;i++){
+                if(NowImg==i)
+                    document.getElementById("lun_"+NowImg).style.display='block';
+                else
+                    document.getElementById("lun_"+i).style.display='none';
+            }
+            if(NowImg==MaxImg)
+                NowImg=1;
+            else
+                NowImg++;
+            },2600)
+    </script>
     <div class="three">
         <div class="three_1"><img src="images/paixingbang.png" alt=""><span>排行榜</span></div>
         <div class="three_2"><img src="images/jingpina.png" alt=""><span>编辑精选</span></div>
