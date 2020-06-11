@@ -8,21 +8,22 @@ li{
 }
 .one{
     width: 100%;
-    height: 0.68rem;
+    height: 0.88rem;
+    border-bottom:1px solid #999999;
     background: #ffffff;
     float: left;
 }
 .shezhi{
-    width: 0.4rem;
-    height: 0.39rem;
+    width: 0.5rem;
+    height: 0.5rem;
     float: left;
-    margin: 0.05rem 0 0 0.22rem;
+    margin: 0.2rem 0 0 0.5rem;
 }
 .message{
     width: 0.4rem;
     height: 0.39rem;
     float: right;
-    margin: 0.05rem 0 0 0;
+    margin: 0.25rem 0.5rem 0 0;
 }
 
 
