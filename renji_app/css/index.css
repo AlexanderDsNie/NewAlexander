@@ -3,6 +3,10 @@
     padding: 0;
     touch-action: none;
 }
+a{
+    color: #888787c0;
+	text-decoration: none;
+}
 li{
     list-style: none;
 }
@@ -14,13 +18,13 @@ li{
 }
 .search{
     width: 6.4rem;
-    height: 0.5rem;
+    height: 0.6rem;
     border-radius: 0.25rem;
     border: none;
     outline: none;
     text-indent: 0.61rem;
     background: #eeeeee url(../images/sousuo.png) 0.2rem 0.1rem no-repeat;
-    background-size: 0.3rem 0.3rem;
+    background-size: 0.37rem 0.37rem;
 }
 .message{
     width: 0.4rem;
@@ -146,7 +150,6 @@ li{
     width: 7.5rem;
     height: 29.7rem;
     background: #ffffff;
-    border-top:1px solid #b4b4b4;
     overflow: hidden;
 }
 #four_0{
@@ -157,7 +160,8 @@ li{
     width: 25%;
     box-sizing: border-box;
     border-right:1px solid #eee;
-    border-bottom:1px solid #eee;
+    border-top:1px solid #eee;
+    border-radius:10%;
 }
 #four_1{
     position: fixed;
