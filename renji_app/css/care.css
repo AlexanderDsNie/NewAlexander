@@ -28,11 +28,85 @@ li{
     height: 0.39rem;
     margin: 0.05rem 0 0 0.22rem;
 }
-
-
-
-
-
+@-webkit-keyframes fadenum {
+    /*设置内容由显示变为隐藏*/
+    0% {
+        background:rgba(238,238,238,0);
+    }
+    100% {
+        background:rgba(238,238,238,0.86);
+    }
+}
+@keyframes fadenum {
+    /*设置内容由显示变为隐藏*/
+    0% {
+        background:rgba(238,238,238,0);
+    }
+    100% {
+        background:rgba(238,238,238,0.86);
+    }
+}
+@-webkit-keyframes fadenum2 {
+    /*设置内容由显示变为隐藏*/
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadenum2 {
+    /*设置内容由显示变为隐藏*/
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+#fabu_s{
+    width: 100%;
+    height: 11.5rem;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0.9rem;
+    bottom: 1rem;
+    background:rgba(238,238,238,0.86);
+}
+.fabu_2{
+    -webkit-animation: fadenum 0.5s ease;
+    -moz-animation: fadenum 0.5s ease;
+    animation: fadenum 0.5s ease;
+}
+.fabu_3{
+    -webkit-animation: fadenum2 0.5s ease;
+    -moz-animation: fadenum2 0.5s ease;
+    animation: fadenum2 0.5s ease;
+}
+#fabu_0{
+    width: 86%;
+    height: 1.5rem;
+    float: left;
+    opacity: 1;
+    margin: 9.25rem 0 0 6%;
+}
+.fabu_1{
+    width: 1.3rem;
+    height: 1.3rem;
+    float: left;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.fabu_1 img{
+    width: 0.65rem;
+    height: 0.65rem;
+    float: left;
+    margin: 0.33rem 0 0 0.33rem;
+}
+.fabu_4{
+    margin: 0 0 0 0.416rem;
+}
 .footer{
     z-index: 9999;
     position: fixed;

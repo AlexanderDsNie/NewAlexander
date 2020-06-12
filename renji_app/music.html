@@ -13,12 +13,37 @@
         <input class="search" type="text" placeholder=" 搜索用户、标签、圈子...">
         <img class="message" src="images/xiaoxi.png" alt="">
     </div>
+    <div id="fabu_s">
+        <div id="fabu_0">
+            <div class="fabu_1"><img src="images/tupian.png" alt=""></div>
+            <div class="fabu_1 fabu_4"><img src="images/yinyue3.png" alt=""></div>
+            <div class="fabu_1 fabu_4"><img src="images/bi.png" alt=""></div>
+            <div class="fabu_1 fabu_4"><img src="images/wenjian.png" alt=""></div>
+        </div>
+    </div>
     <div class="footer">
         <div class="footer_0"><a href="index.html"><img src="images/zhuye7.png" alt=""></a></div>
         <div class="footer_0"><img src="images/yinyue2.png" alt=""></div>
-        <div class="footer_0"><img src="images/fabu_1.png" alt=""></div>
+        <div class="footer_0" id="fabu"><img src="images/fabu_1.png" alt=""></div>
         <div class="footer_0"><a href="care.html"><img src="images/gz.png" alt=""></a></div>
         <div class="footer_0"><a href="myself.html"><img src="images/personal.png" alt=""></a></div>
     </div>
+    <script src="js/zepto.js"></script>
+    <script src="js/touch.js"></script>
+    <script>
+        var nows = 0;
+        $('#fabu').on('click',function(){
+            if(nows==0){
+                $('#fabu_s').show();
+                document.getElementById("fabu_s").className = 'fabu_2';
+                nows = 1;
+            }
+            else if(nows==1){
+                $('#fabu_s').hide();
+                document.getElementById("fabu_s").className = 'fabu_3';
+                nows = 0;
+            }
+        })
+    </script>
 </body>
 </html>
