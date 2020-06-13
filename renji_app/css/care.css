@@ -14,8 +14,8 @@ li{
     padding: 0.2rem;
 }
 .search{
-    width: 6.4rem;
-    height: 0.6rem;
+    width: 6.2rem;
+    height: 0.56rem;
     border-radius: 0.25rem;
     border: none;
     outline: none;
@@ -26,7 +26,7 @@ li{
 .message{
     width: 0.4rem;
     height: 0.39rem;
-    margin: 0.05rem 0 0 0.22rem;
+    margin: 0.05rem 0 0 0.36rem;
 }
 @-webkit-keyframes fadenum {
     /*设置内容由显示变为隐藏*/
