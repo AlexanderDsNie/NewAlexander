@@ -28,6 +28,80 @@ li{
     height: 0.39rem;
     margin: 0.05rem 0 0 0.36rem;
 }
+.two{
+    width: 100%;
+    height: 7.3rem;
+    float: left;
+    font-family:"微软雅黑";
+    margin: 0.1rem 0 0 0 ;
+}
+.two_0{
+    width: 96%;
+    height: 1.2rem;
+    float: left;
+    margin: 0 1% 0 3%;
+}
+.two_1{
+    width: 20%;
+    height: 1.2rem;
+    float: left;
+}
+.two_1 img{
+    width: 0.47rem;
+    height: 0.47rem;
+    float: left;
+    margin: 0.36rem 0 0 0.43rem;
+}
+#yunpan_img{
+    width: 0.48rem;
+    height: 0.4rem;
+    float: left;
+    margin: 0.42rem 0 0 0.45rem;
+}
+.two_2{
+    width: 80%;
+    height: 1.2rem;
+    float: left;
+    border-bottom:1px solid #ddd;
+}
+.two_2_1{
+    width: 50%;
+    height: 1.2rem;
+    float: left;
+    font-weight: 500;
+    font-size: 0.3rem;
+    color: black;
+    line-height: 1.2rem;
+}
+#create_name{
+    color: #1296db;
+}
+.two_2_2{
+    width: 40%;
+    height: 1.2rem;
+    float: left;
+    text-align: right;
+    line-height: 1.2rem;
+    font-size: 0.26rem;
+    color: #888;
+}
+.two_2_3{
+    width: 10%;
+    height: 1.2rem;
+    float: right;
+}
+.two_2_3 img{
+    width: 0.3rem;
+    height: 0.3rem;
+    float: right;
+    margin: 0.45rem 0.1rem 0 0;
+}
+#suo{
+    width: 0.3rem;
+    height: 0.3rem;
+    float: right;
+    margin: 0.45rem 0 0 0;
+}
 @-webkit-keyframes fadenum {
     /*设置内容由显示变为隐藏*/
     0% {
