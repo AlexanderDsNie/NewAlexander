@@ -103,7 +103,6 @@ li{
     margin: 0.45rem 0 0 0;
 }
 @-webkit-keyframes fadenum {
-    /*设置内容由显示变为隐藏*/
     0% {
         background:rgba(238,238,238,0);
     }
@@ -112,7 +111,6 @@ li{
     }
 }
 @keyframes fadenum {
-    /*设置内容由显示变为隐藏*/
     0% {
         background:rgba(238,238,238,0);
     }
@@ -121,21 +119,19 @@ li{
     }
 }
 @-webkit-keyframes fadenum2 {
-    /*设置内容由显示变为隐藏*/
     0% {
-        opacity: 1;
+        background:rgba(238,238,238,0.86);
     }
     100% {
-        opacity: 0;
+        background:rgba(238,238,238,0);
     }
 }
 @keyframes fadenum2 {
-    /*设置内容由显示变为隐藏*/
     0% {
-        opacity: 1;
+        background:rgba(238,238,238,0.86);
     }
     100% {
-        opacity: 0;
+        background:rgba(238,238,238,0);
     }
 }
 #fabu_s{
@@ -152,11 +148,13 @@ li{
     -webkit-animation: fadenum 0.5s ease;
     -moz-animation: fadenum 0.5s ease;
     animation: fadenum 0.5s ease;
+    display: block;
 }
 .fabu_3{
     -webkit-animation: fadenum2 0.5s ease;
     -moz-animation: fadenum2 0.5s ease;
     animation: fadenum2 0.5s ease;
+    display: none;
 }
 #fabu_0{
     width: 86%;
