@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    touch-action: none;
+}
+body{
+    background-color: #f9f9f9;
+}
+li{
+    list-style: none;
+}
+.one{
+    width: 100%;
+    height: 0.88rem;
+    border-bottom:1px solid #999999;
+    background: #ffffff;
+    float: left;
+}
+.shezhi{
+    width: 0.5rem;
+    height: 0.5rem;
+    float: left;
+    margin: 0.2rem 0 0 0.5rem;
+}
+.message{
+    width: 0.4rem;
+    height: 0.39rem;
+    float: right;
+    margin: 0.25rem 0.5rem 0 0;
+}
+#music {
+    width: 100%;
+    height: 9rem;
+    float: left;    
+    text-align: center;
+}
+#musicName {
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-size: 0.5rem;
+    font-family: "微软雅黑";
+    float: left;
+}
+#container {
+    width: 100%;
+    height: 9rem;
+    float: left;
+    text-align: center;
+    background: url(../images3/独りんぼエンヴィー.jpg) no-repeat; 
+    background-size: 100% 100%;
+    background-position: center;
+}
+#con_img{
+    width: 100%;
+    height: 9rem;
+    float: left;
+    text-align: center;
+    background:rgba(255,255,255,0.7);
+}
+@keyframes turn{
+    0%{-webkit-transform:rotate(0deg);}
+    25%{-webkit-transform:rotate(90deg);}
+    50%{-webkit-transform:rotate(180deg);}
+    75%{-webkit-transform:rotate(270deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+#music_img {
+    width: 5rem;
+    height: 5rem;
+    margin: 1.3rem auto 0.7rem;
+    border:0.17rem solid #fff;
+    border-radius: 50%;
+}
+.music_turn{
+    animation:turn 25s linear infinite;
+}
+.music_pause{
+    animation-play-state:paused;
+}
+#con_button{
+    width: 94%;
+    height: 1rem;
+    margin: 0 0 0 3%;
+}
+.button_0{
+    width: 20%;
+    height: 1rem;
+    float: left;
+}
+.button_0 img{
+    width: 0.5rem;
+    height: 0.5rem;
+    float: left;
+    margin: 0.3rem 0 0 0.5rem;
+}
+audio {
+    width: 100%;
+    height: 1rem;
+    float: left;
+    display: block;
+    border-radius: 0;
+}
+.btn{
+    width: 100%;
+    height: 1.2rem;
+    position: fixed;
+    bottom: 0;
+    border-top:1px solid #999999;
+}
+.button0 img{
+    width: 0.5rem;
+    height: 0.5rem;
+    float: left;
+    margin: 0.4rem 0 0 0.5rem;
+}
+.button0 {
+    width: 20%;
+    height: 1.5rem;
+    float: left;
+    text-align: center;
+}
+#play_0{
+    width: 0.8rem;
+    height: 0.8rem;
+    float: left;
+    margin: 0.24rem 0 0 0.38rem;
+}
+#play_line{
+    width: 0.6rem;
+    height: 0.6rem;
+    float: left;
+    margin: 0.34rem 0 0 0.4rem;
+}
