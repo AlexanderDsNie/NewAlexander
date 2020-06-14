@@ -63,6 +63,7 @@
 		}
 		prev.onclick = function(){
 			num = (num + len - 1) % len;
+			musicImg.className = 'music_turn';
 			audio.src = './music/' + music[num] + '.mp3';
 			musicName.innerHTML = music[num];
 			bgImage.style.backgroundImage = 'url(./images3/' + music[num] + '.jpg)';
@@ -71,6 +72,7 @@
 		}
 		next.onclick = function(){
 			num = (num + 1) % len;
+			musicImg.className = 'music_turn';
 			audio.src = './music/' + music[num] + '.mp3';
 			musicName.innerHTML = music[num];
 			bgImage.style.backgroundImage = 'url(./images3/' + music[num] + '.jpg)';
