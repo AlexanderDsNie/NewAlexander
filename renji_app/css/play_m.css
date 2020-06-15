@@ -95,9 +95,9 @@ li{
     margin: 0.3rem 0 0 0.5rem;
 }
 audio {
-    width: 100%;
+    width: 110%;
     height: 1rem;
-    float: left;
+    float: right;
     display: block;
     border-radius: 0;
 }
