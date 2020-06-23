@@ -7,10 +7,30 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="one"></div>
-    <div id="two">
-        <img id="two_img" src="清明上河图.jpg" alt="">
+    <div class="one">
+        <div class="one_1">
+            <div class="one_2"><img id="tubiao1" src="images/fangda.png" alt=""></div>
+            <div class="one_3">清明上河图</div>
+            <div class="one_2"><img id="tubiao2" src="images/suoxiao.png" alt=""></div>
+        </div>
     </div>
-    <div class="one"></div>
+    <div class="one_add"></div>
+    <div id="two">
+        <img class="two_img" src="images/qmsht.jpg" alt="">
+    </div>
+    <script type="text/javascript">
+        var play1 = document.getElementById('tubiao1');
+        var play2 = document.getElementById('tubiao2');
+        play1.onclick = function(){
+            var image=document.getElementsByClassName("two_img")[0];
+            image.style.height=image.height*1.1+'px';
+            image.style.width=image.width*1.1+'px';
+        }
+        play2.onclick = function(){
+            var image=document.getElementsByClassName("two_img")[0];
+            image.style.height=image.height/1.1+'px';
+            image.style.width=image.width/1.1+'px';
+        }
+    </script>
 </body>
 </html>
