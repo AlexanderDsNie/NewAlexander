@@ -6,6 +6,9 @@
 body{
     background-color: #eee;
 }
+audio{
+    display: none;
+}
 a{
 	text-decoration: none;
 }
@@ -60,10 +63,100 @@ li{
     width: 20000px;
     height: 617.4px;
     float: left;
+    z-index: 1;
+    position: relative;
     background-color: #fff;
 }
 .two_img{
     width: 20000px;
     height: 617.4px;
     float: left;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.touming{
+    opacity:0.2;
+}
+#tree{
+    width: 600px; 
+    height: 440px;
+    z-index: 333;
+    position: absolute;
+    top: 110px;
+    left: 370px;
+    background-color: green;
+}
+#boat1{
+    width: 600px; 
+    height: 440px;
+    z-index: 333;
+    position: absolute;
+    top: 110px;
+    left: 1100px;
+    background-color: blue;
+}
+#daoguan{
+    width: 700px; 
+    height: 400px;
+    z-index: 333;
+    position: absolute;
+    top: 90px;
+    left: 2080px;
+    background-color: mediumturquoise;
+}
+#person1{
+    width: 800px; 
+    height: 440px;
+    z-index: 333;
+    position: absolute;
+    top: 80px;
+    left: 4100px;
+    background-color: greenyellow;
+}
+#person2{
+    width: 4760px; 
+    height: 300px;
+    z-index: 333;
+    position: absolute;
+    top: 280px;
+    left: 6700px;
+    background-color: yellow;
+}
+#person3{
+    width: 660px; 
+    height: 380px;
+    z-index: 333;
+    position: absolute;
+    top: 190px;
+    left: 12500px;
+    background-color: orange;
+}
+#soilder{
+    width: 1260px; 
+    height: 140px;
+    z-index: 333;
+    position: absolute;
+    top: 10px;
+    left: 11700px;
+    background-color: red;
+}
+#boat2{
+    width: 1200px; 
+    height: 360px;
+    z-index: 333;
+    position: absolute;
+    top: 100px;
+    left: 15100px;
+    background-color: blueviolet;
+}
+#book{
+    width: 600px; 
+    height: 360px;
+    z-index: 333;
+    position: absolute;
+    top: 200px;
+    left: 16350px;
+    background-color: hotpink;
 }
