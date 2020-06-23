@@ -17,15 +17,16 @@
     <div class="one_add"></div>
     <div id="two">
         <img class="two_img" src="images/qmsht.jpg" alt="">
-        <div id="tree" class="touming"><audio id="audio1" src="独りんぼエンヴィー.mp3" controls></audio></div>
-        <div id="boat1" class="touming"><audio id="audio2" src="岁月如歌.mp3" controls></audio></div>
-        <div id="daoguan" class="touming"><audio id="audio3" src="星辰大海.mp3" controls></audio></div>
-        <div id="person1" class="touming"><audio id="audio4" src="好敵手です！.mp3" controls></audio></div>
-        <div id="person2" class="touming"><audio id="audio5" src="独りんぼエンヴィー.mp3" controls></audio></div>
-        <div id="person3" class="touming"><audio id="audio6" src="岁月如歌.mp3" controls></audio></div>
-        <div id="soilder" class="touming"><audio id="audio7" src="星辰大海.mp3" controls></audio></div>
-        <div id="boat2" class="touming"><audio id="audio8" src="好敵手です！.mp3" controls></audio></div>
-        <div id="book" class="touming"><audio id="audio9" src="独りんぼエンヴィー.mp3" controls></audio></div>
+        <div id="tree" class="touming"><audio id="audio1" src="http://img02.tuke88.com/newpreview_music/08/98/44/5c8892b22df1256353.mp3" controls></audio></div>
+        <div id="boat1" class="touming"><audio id="audio2" src="https://img.51miz.com/preview/sound/00/27/64/51miz-S276493-449FC7A1.mp3" controls></audio></div>
+        <div id="daoguan" class="touming"><audio id="audio3" src="http://img02.tuke88.com/newpreview_music/08/98/96/5c88cff9c776b35479.mp3" controls></audio></div>
+        <div id="person1" class="touming"><audio id="audio4" src="http:////img.51miz.com/preview/sound/00/22/09/51miz-S220974-276DF4A3-thumb.mp3" controls></audio></div>
+        <div id="person2" class="touming"><audio id="audio5" src="http://img02.tuke88.com/newpreview_music/09/00/28/5c8913ee4bfe188385.mp3" controls></audio></div>
+        <div id="person3" class="touming"><audio id="audio6" src="http://img02.tuke88.com/newpreview_music/08/98/87/5c88c693129b625109.mp3" controls></audio></div>
+        <div id="soilder" class="touming"><audio id="audio7" src="http://img.51miz.com/preview/sound/00/22/73/51miz-S227385-39052CD2-thumb.mp3" controls></audio></div>
+        <div id="boat2" class="touming"><audio id="audio8" src="http://img02.tuke88.com/newpreview_music/09/00/14/5c890387daa7764265.mp3" controls></audio></div>
+        <div id="horse" class="touming"><audio id="audio9" src="http://img.51miz.com/preview/sound/00/27/27/51miz-S272718-131872F4.mp3" controls></audio></div>
+        <div id="book" class="touming"><audio id="audio10" src="http://img02.tuke88.com/newpreview_music/08/98/87/5c88c693129b625109.mp3" controls></audio></div>
     </div>
     <script type="text/javascript">
         var play1 = document.getElementById('tubiao1');
@@ -39,6 +40,7 @@
         var play9 = document.getElementById('soilder');
         var play10 = document.getElementById('boat2');
         var play11 = document.getElementById('book');
+        var play12 = document.getElementById('horse');
         play3.onclick = function(){
 			if(audio1.paused){
 				audio1.play();
@@ -96,6 +98,13 @@
             }
 		}
         play11.onclick = function(){
+			if(audio10.paused){
+				audio10.play();
+			}else{
+                audio10.pause();
+            }
+		}
+        play12.onclick = function(){
 			if(audio9.paused){
 				audio9.play();
 			}else{
