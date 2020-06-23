@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    touch-action: none;
+}
+a{
+	text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.one{
+    width: 20000px;
+    height: 60px;
+    float: left;
+    background-color: #eee;
+}
+#two{
+    width: 20000px;
+    height: 617.4px;
+    float: left;
+    background-color: #fff;
+}
+#two_img{
+    width: 20000px;
+    height: 617.4px;
+    float: left;
+}
